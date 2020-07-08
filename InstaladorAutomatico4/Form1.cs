@@ -118,8 +118,7 @@ namespace InstaladorAutomatico4
         }
 
 
-        // teste reversao
-
+       
         private void rd_netagent_CheckedChanged(object sender, EventArgs e)
         {
 
