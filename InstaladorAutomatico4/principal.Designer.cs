@@ -30,11 +30,10 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cb_globus = new System.Windows.Forms.CheckBox();
             this.cb_ccleaner = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_markall = new System.Windows.Forms.Button();
-            this.rd_netagent = new System.Windows.Forms.RadioButton();
-            this.rd_avast = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.cb_klite = new System.Windows.Forms.CheckBox();
             this.cb_winrar = new System.Windows.Forms.CheckBox();
@@ -50,7 +49,8 @@
             this.cb_ultravnc = new System.Windows.Forms.CheckBox();
             this.cb_radmin = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cb_globus = new System.Windows.Forms.CheckBox();
+            this.cb_netgent = new System.Windows.Forms.CheckBox();
+            this.cb_avast = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -69,12 +69,12 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.cb_avast);
+            this.tabPage1.Controls.Add(this.cb_netgent);
             this.tabPage1.Controls.Add(this.cb_globus);
             this.tabPage1.Controls.Add(this.cb_ccleaner);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.bt_markall);
-            this.tabPage1.Controls.Add(this.rd_netagent);
-            this.tabPage1.Controls.Add(this.rd_avast);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.cb_klite);
             this.tabPage1.Controls.Add(this.cb_winrar);
@@ -95,6 +95,18 @@
             this.tabPage1.Size = new System.Drawing.Size(405, 246);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
+            // 
+            // cb_globus
+            // 
+            this.cb_globus.AutoSize = true;
+            this.cb_globus.Checked = true;
+            this.cb_globus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_globus.Location = new System.Drawing.Point(244, 68);
+            this.cb_globus.Name = "cb_globus";
+            this.cb_globus.Size = new System.Drawing.Size(59, 17);
+            this.cb_globus.TabIndex = 22;
+            this.cb_globus.Text = "Globus";
+            this.cb_globus.UseVisualStyleBackColor = true;
             // 
             // cb_ccleaner
             // 
@@ -127,30 +139,6 @@
             this.bt_markall.Text = "Marcar todos";
             this.bt_markall.UseVisualStyleBackColor = true;
             this.bt_markall.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // rd_netagent
-            // 
-            this.rd_netagent.AutoSize = true;
-            this.rd_netagent.Checked = true;
-            this.rd_netagent.Location = new System.Drawing.Point(244, 91);
-            this.rd_netagent.Name = "rd_netagent";
-            this.rd_netagent.Size = new System.Drawing.Size(125, 17);
-            this.rd_netagent.TabIndex = 18;
-            this.rd_netagent.TabStop = true;
-            this.rd_netagent.Text = "Kaspersky Net Agent";
-            this.rd_netagent.UseVisualStyleBackColor = true;
-            this.rd_netagent.CheckedChanged += new System.EventHandler(this.rd_netagent_CheckedChanged);
-            // 
-            // rd_avast
-            // 
-            this.rd_avast.AutoSize = true;
-            this.rd_avast.Location = new System.Drawing.Point(244, 113);
-            this.rd_avast.Name = "rd_avast";
-            this.rd_avast.Size = new System.Drawing.Size(52, 17);
-            this.rd_avast.TabIndex = 17;
-            this.rd_avast.Text = "Avast";
-            this.rd_avast.UseVisualStyleBackColor = true;
-            this.rd_avast.CheckedChanged += new System.EventHandler(this.rd_avast_CheckedChanged);
             // 
             // button1
             // 
@@ -328,17 +316,27 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
             // 
-            // cb_globus
+            // cb_netgent
             // 
-            this.cb_globus.AutoSize = true;
-            this.cb_globus.Checked = true;
-            this.cb_globus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_globus.Location = new System.Drawing.Point(244, 68);
-            this.cb_globus.Name = "cb_globus";
-            this.cb_globus.Size = new System.Drawing.Size(59, 17);
-            this.cb_globus.TabIndex = 22;
-            this.cb_globus.Text = "Globus";
-            this.cb_globus.UseVisualStyleBackColor = true;
+            this.cb_netgent.AutoSize = true;
+            this.cb_netgent.Checked = true;
+            this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_netgent.Location = new System.Drawing.Point(244, 92);
+            this.cb_netgent.Name = "cb_netgent";
+            this.cb_netgent.Size = new System.Drawing.Size(126, 17);
+            this.cb_netgent.TabIndex = 23;
+            this.cb_netgent.Text = "Kaspersky Net Agent";
+            this.cb_netgent.UseVisualStyleBackColor = true;
+            // 
+            // cb_avast
+            // 
+            this.cb_avast.AutoSize = true;
+            this.cb_avast.Location = new System.Drawing.Point(244, 115);
+            this.cb_avast.Name = "cb_avast";
+            this.cb_avast.Size = new System.Drawing.Size(53, 17);
+            this.cb_avast.TabIndex = 24;
+            this.cb_avast.Text = "Avast";
+            this.cb_avast.UseVisualStyleBackColor = true;
             // 
             // principal
             // 
@@ -348,6 +346,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "principal";
             this.Text = "Instalador Automático v4.0";
+            this.Load += new System.EventHandler(this.principal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -374,12 +373,12 @@
         private System.Windows.Forms.CheckBox cb_winrar;
         private System.Windows.Forms.CheckBox cb_thunderbird;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton rd_netagent;
-        private System.Windows.Forms.RadioButton rd_avast;
         private System.Windows.Forms.Button bt_markall;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox cb_ccleaner;
         private System.Windows.Forms.CheckBox cb_globus;
+        private System.Windows.Forms.CheckBox cb_avast;
+        private System.Windows.Forms.CheckBox cb_netgent;
     }
 }
 
