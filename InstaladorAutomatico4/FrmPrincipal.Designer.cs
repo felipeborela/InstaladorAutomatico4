@@ -1,6 +1,6 @@
 ﻿namespace InstaladorAutomatico4
 {
-    partial class principal
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.cb_avast = new System.Windows.Forms.CheckBox();
+            this.cb_netgent = new System.Windows.Forms.CheckBox();
             this.cb_globus = new System.Windows.Forms.CheckBox();
             this.cb_ccleaner = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,8 +54,8 @@
             this.cb_ultravnc = new System.Windows.Forms.CheckBox();
             this.cb_radmin = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cb_netgent = new System.Windows.Forms.CheckBox();
-            this.cb_avast = new System.Windows.Forms.CheckBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -62,13 +67,16 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(413, 272);
+            this.tabControl1.Size = new System.Drawing.Size(408, 303);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.progressBar1);
             this.tabPage1.Controls.Add(this.cb_avast);
             this.tabPage1.Controls.Add(this.cb_netgent);
             this.tabPage1.Controls.Add(this.cb_globus);
@@ -92,9 +100,50 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(405, 246);
+            this.tabPage1.Size = new System.Drawing.Size(400, 277);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(134, 176);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(76, 23);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Verificar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(18, 240);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(352, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 25;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // cb_avast
+            // 
+            this.cb_avast.AutoSize = true;
+            this.cb_avast.Location = new System.Drawing.Point(244, 115);
+            this.cb_avast.Name = "cb_avast";
+            this.cb_avast.Size = new System.Drawing.Size(53, 17);
+            this.cb_avast.TabIndex = 24;
+            this.cb_avast.Text = "Avast";
+            this.cb_avast.UseVisualStyleBackColor = true;
+            // 
+            // cb_netgent
+            // 
+            this.cb_netgent.AutoSize = true;
+            this.cb_netgent.Checked = true;
+            this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_netgent.Location = new System.Drawing.Point(244, 92);
+            this.cb_netgent.Name = "cb_netgent";
+            this.cb_netgent.Size = new System.Drawing.Size(126, 17);
+            this.cb_netgent.TabIndex = 23;
+            this.cb_netgent.Text = "Kaspersky Net Agent";
+            this.cb_netgent.UseVisualStyleBackColor = true;
             // 
             // cb_globus
             // 
@@ -142,7 +191,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 176);
+            this.button1.Location = new System.Drawing.Point(245, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 52);
             this.button1.TabIndex = 16;
@@ -312,39 +361,31 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(405, 246);
+            this.tabPage2.Size = new System.Drawing.Size(400, 277);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
             // 
-            // cb_netgent
+            // timer1
             // 
-            this.cb_netgent.AutoSize = true;
-            this.cb_netgent.Checked = true;
-            this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_netgent.Location = new System.Drawing.Point(244, 92);
-            this.cb_netgent.Name = "cb_netgent";
-            this.cb_netgent.Size = new System.Drawing.Size(126, 17);
-            this.cb_netgent.TabIndex = 23;
-            this.cb_netgent.Text = "Kaspersky Net Agent";
-            this.cb_netgent.UseVisualStyleBackColor = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cb_avast
+            // button4
             // 
-            this.cb_avast.AutoSize = true;
-            this.cb_avast.Location = new System.Drawing.Point(244, 115);
-            this.cb_avast.Name = "cb_avast";
-            this.cb_avast.Size = new System.Drawing.Size(53, 17);
-            this.cb_avast.TabIndex = 24;
-            this.cb_avast.Text = "Avast";
-            this.cb_avast.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(135, 206);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 27;
+            this.button4.Text = "Zerar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // principal
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 272);
+            this.ClientSize = new System.Drawing.Size(407, 303);
             this.Controls.Add(this.tabControl1);
-            this.Name = "principal";
+            this.Name = "FrmPrincipal";
             this.Text = "Instalador Automático v4.0";
             this.Load += new System.EventHandler(this.principal_Load);
             this.tabControl1.ResumeLayout(false);
@@ -379,6 +420,10 @@
         private System.Windows.Forms.CheckBox cb_globus;
         private System.Windows.Forms.CheckBox cb_avast;
         private System.Windows.Forms.CheckBox cb_netgent;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

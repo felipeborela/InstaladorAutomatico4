@@ -16,7 +16,7 @@ namespace InstaladorAutomatico4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new principal());
+            Application.Run(new FrmPrincipal());
         }
     }
 }

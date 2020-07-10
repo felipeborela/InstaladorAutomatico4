@@ -11,9 +11,9 @@ using System.IO;
 
 namespace InstaladorAutomatico4
 {
-    public partial class principal : Form
+    public partial class FrmPrincipal : Form
     {
-        public principal()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
@@ -86,12 +86,21 @@ namespace InstaladorAutomatico4
         string netagentDestPath = @"C:\TI\NetAgent\";
         string netagentInstaller_DestPath = @"C:\TI\NetAgent\InstalarNetAgent.bat";
 
+        int cbCounter = 0;
         private void button1_Click(object sender, EventArgs e)
         {
+            int progressCounter = 0;
+            string progressCounterString = progressCounter.ToString();
+
+
             if (cb_radmin.Checked)
             {
                 if (File.Exists(radminInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                    progressBar1.Value = progressBar1.Value + 10;
+                }
                 else
                 {
                     Directory.CreateDirectory(radminDestPath);
@@ -103,8 +112,12 @@ namespace InstaladorAutomatico4
             if (cb_ultravnc.Checked)
             {
                 if (File.Exists(ultravncInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
-                else
+                    cbCounter = cbCounter + 1;
+                    progressBar1.Value = progressBar1.Value + 10;
+                }
+            else
                 {
                     Directory.CreateDirectory(ultravncDestPath);
                     System.IO.File.Copy(ultravncInstaller_SourcePath, ultravncInstaller_DestPath, true);
@@ -115,7 +128,10 @@ namespace InstaladorAutomatico4
             if (cb_teamviewer.Checked)
             {
                 if (File.Exists(teamviewerInstaller_DestPath))
+                { 
                     System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(teamviewerDestPath);
@@ -127,7 +143,10 @@ namespace InstaladorAutomatico4
             if (cb_ammyy.Checked)
             {
                 if (File.Exists(ammyyInstaller_DestPath))
+                { 
                     System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(ammyyDestPath);
@@ -139,7 +158,10 @@ namespace InstaladorAutomatico4
             if (cb_anydesk.Checked)
             {
                 if (File.Exists(anydeskInstaller_DestPath))
+                { 
                     System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(anydeskDestPath);
@@ -151,7 +173,10 @@ namespace InstaladorAutomatico4
             if (cb_libreoffice.Checked)
             {
                 if (File.Exists(libreofficeInstaller_DestPath))
+                { 
                     System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(libreofficeDestPath);
@@ -163,7 +188,10 @@ namespace InstaladorAutomatico4
             if (cb_ccleaner.Checked)
             {
                 if (File.Exists(ccleanerInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(ccleanerDestPath);
@@ -175,7 +203,10 @@ namespace InstaladorAutomatico4
             if (cb_chrome.Checked)
             {
                 if (File.Exists(chromeInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(chromeInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(chromeDestPath);
@@ -187,7 +218,10 @@ namespace InstaladorAutomatico4
             if (cb_cutepdf.Checked)
             {
                 if (File.Exists(cutepdfInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(cutepdfDestPath);
@@ -199,7 +233,10 @@ namespace InstaladorAutomatico4
             if (cb_fusioninventory.Checked)
             {
                 if (File.Exists(fusioninventoryInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(fusioninventoryDestPath);
@@ -211,7 +248,10 @@ namespace InstaladorAutomatico4
             if (cb_spark.Checked)
             {
                 if (File.Exists(sparkInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(sparkInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(sparkDestPath);
@@ -223,7 +263,10 @@ namespace InstaladorAutomatico4
             if (cb_thunderbird.Checked)
             {
                 if (File.Exists(thunderbirdInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(thunderbirdDestPath);
@@ -235,7 +278,10 @@ namespace InstaladorAutomatico4
             if (cb_winrar.Checked)
             {
                 if (File.Exists(winrarInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(winrarInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(winrarDestPath);
@@ -247,7 +293,10 @@ namespace InstaladorAutomatico4
             if (cb_klite.Checked)
             {
                 if (File.Exists(kliteInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(kliteInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(kliteDestPath);
@@ -259,7 +308,10 @@ namespace InstaladorAutomatico4
             if (cb_globus.Checked)
             {
                 if (File.Exists(globusInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(globusInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(globusDestPath);
@@ -271,7 +323,10 @@ namespace InstaladorAutomatico4
             if (cb_avast.Checked)
             {
                 if (File.Exists(avastInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(avastInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(avastDestPath);
@@ -283,7 +338,10 @@ namespace InstaladorAutomatico4
             if (cb_netgent.Checked)
             {
                 if (File.Exists(netagentInstaller_DestPath))
+                {
                     System.Diagnostics.Process.Start(netagentInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
                 else
                 {
                     Directory.CreateDirectory(netagentDestPath);
@@ -291,7 +349,10 @@ namespace InstaladorAutomatico4
                     System.Diagnostics.Process.Start(netagentInstaller_DestPath);
                 }
             }
+            string cbCounterString = cbCounter.ToString();
+            MessageBox.Show(cbCounterString);
 
+            cbCounter = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -350,6 +411,39 @@ namespace InstaladorAutomatico4
         private void principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.Value < 100)
+            {
+                progressBar1.Value = progressBar1.Value + 10;
+            }
+            if (progressBar1.Value == 100)
+            {
+                FrmPrincipal frmPrincipal = new FrmPrincipal();
+                timer1.Stop();       // para o relógio
+            }
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string cbCounterString = cbCounter.ToString();
+            MessageBox.Show(cbCounterString);
+
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cbCounter = 0;
         }
     }
 }
