@@ -22,7 +22,7 @@ namespace InstaladorAutomatico4
         string radminDestPath = @"C:\TI\Radmin\";
         string radminInstaller_DestPath = @"C:\TI\Radmin\InstalarRadmin.bat";
 
-        string ultravncSourcePath = @"\\192.168.0.13\InstaladorAutomatico\UltraVNC\InstalarUltraVNC.bat";
+        string ultravncInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\UltraVNC\InstalarUltraVNC.bat";
         string ultravncDestPath = @"C:\TI\UltraVNC\";
         string ultravncInstaller_DestPath = @"C:\TI\UltraVNC\InstalarUltraVNC.bat";
 
@@ -30,20 +30,61 @@ namespace InstaladorAutomatico4
         string teamviewerDestPath = @"C:\TI\TeamViewer\";
         string teamviewerInstaller_DestPath = @"C:\TI\TeamViewer\InstalarTeamViewer.bat";
 
-        string ammyySourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string anydeskSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string libreofficeSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string ccleanerSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string cutepdfSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string fusioninventorySourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string sparkSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string thunderbirdSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string winrarSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string kliteSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string globusSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string avastSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
-        string netagentSourcePath = @"\\192.168.0.13\InstaladorAutomatico\Radmin\InstalarRadmin.bat";
+        string ammyyInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Ammyy\InstalarAmmyy.bat";
+        string ammyyDestPath = @"C:\TI\Ammyy\";
+        string ammyyInstaller_DestPath = @"C:\TI\ammyy\InstalarAmmyy.bat";
 
+        string anydeskInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Anydesk\InstalarAnydesk.bat";
+        string anydeskDestPath = @"C:\TI\Anydesk\";
+        string anydeskInstaller_DestPath = @"C:\TI\Anydesk\InstalarAnydesk.bat";
+
+        string libreofficeInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\LibreOffice\InstalarLibreOffice.bat";
+        string libreofficeDestPath = @"C:\TI\LibreOffice\";
+        string libreofficeInstaller_DestPath = @"C:\TI\Libreoffice\InstalarLibreOffice.bat";
+
+        string ccleanerInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\CCleaner\InstalarCCleaner.bat";
+        string ccleanerDestPath = @"C:\TI\CCleaner\";
+        string ccleanerInstaller_DestPath = @"C:\TI\CCleaner\InstalarCCleaner.bat";
+
+        string chromeInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Chrome\InstalarChrome.bat";
+        string chromeDestPath = @"C:\TI\Chrome\";
+        string chromeInstaller_DestPath = @"C:\TI\Chrome\InstalarChrome.bat";
+
+        string cutepdfInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\CutePDF\InstalarCutePDF.bat";
+        string cutepdfDestPath = @"C:\TI\CutePDF\";
+        string cutepdfInstaller_DestPath = @"C:\TI\CutePDF\InstalarCutePDF.bat";
+
+        string fusioninventoryInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\FusionInventory\InstalarFusionInventory.bat";
+        string fusioninventoryDestPath = @"C:\TI\FusionInventory\";
+        string fusioninventoryInstaller_DestPath = @"C:\TI\FusionInventory\InstalarFusionInventory.bat";
+
+        string sparkInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Spark\InstalarSpark.bat";
+        string sparkDestPath = @"C:\TI\Spark\";
+        string sparkInstaller_DestPath = @"C:\TI\Spark\InstalarSpark.bat";
+
+        string thunderbirdInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Thunderbird\InstalarThunderbird.bat";
+        string thunderbirdDestPath = @"C:\TI\Thunderbird\";
+        string thunderbirdInstaller_DestPath = @"C:\TI\Thunderbird\InstalarThunderbird.bat";
+
+        string winrarInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Winrar\InstalarWinrar.bat";
+        string winrarDestPath = @"C:\TI\Winrar\";
+        string winrarInstaller_DestPath = @"C:\TI\Winrar\InstalarWinrar.bat";
+
+        string kliteInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\KLite\InstalarKLite.bat";
+        string kliteDestPath = @"C:\TI\KLite\";
+        string kliteInstaller_DestPath = @"C:\TI\KLite\InstalarKLite.bat";
+
+        string globusInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Globus\InstalarGlobus.bat";
+        string globusDestPath = @"C:\TI\Globus\";
+        string globusInstaller_DestPath = @"C:\TI\Globus\InstalarGlobus.bat";
+
+        string avastInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Avast\InstalarAvast.bat";
+        string avastDestPath = @"C:\TI\Avast\";
+        string avastInstaller_DestPath = @"C:\TI\Avast\InstalarAvast.bat";
+
+        string netagentInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\NetAgent\InstalarNetAgent.bat";
+        string netagentDestPath = @"C:\TI\NetAgent\";
+        string netagentInstaller_DestPath = @"C:\TI\NetAgent\InstalarNetAgent.bat";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -128,6 +169,18 @@ namespace InstaladorAutomatico4
                     Directory.CreateDirectory(ccleanerDestPath);
                     System.IO.File.Copy(ccleanerInstaller_SourcePath, ccleanerInstaller_DestPath, true);
                     System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
+                }
+            }
+
+            if (cb_chrome.Checked)
+            {
+                if (File.Exists(chromeInstaller_DestPath))
+                    System.Diagnostics.Process.Start(chromeInstaller_DestPath);
+                else
+                {
+                    Directory.CreateDirectory(chromeDestPath);
+                    System.IO.File.Copy(chromeInstaller_SourcePath, chromeInstaller_DestPath, true);
+                    System.Diagnostics.Process.Start(chromeInstaller_DestPath);
                 }
             }
 
@@ -227,7 +280,7 @@ namespace InstaladorAutomatico4
                 }
             }
 
-            if (cb_netagent.Checked)
+            if (cb_netgent.Checked)
             {
                 if (File.Exists(netagentInstaller_DestPath))
                     System.Diagnostics.Process.Start(netagentInstaller_DestPath);
