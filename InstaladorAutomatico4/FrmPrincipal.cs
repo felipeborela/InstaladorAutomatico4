@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
+using System.Net.NetworkInformation;
+
 
 namespace InstaladorAutomatico4
 {
@@ -86,19 +89,28 @@ namespace InstaladorAutomatico4
         string netagentDestPath = @"C:\TI\NetAgent\";
         string netagentInstaller_DestPath = @"C:\TI\NetAgent\InstalarNetAgent.bat";
 
+        string officeInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Office\InstalarOffice.bat";
+        string officeDestPath = @"C:\TI\Office\";
+        string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
+
         int cbCounter = 0;
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             int progressCounter = 0;
             string progressCounterString = progressCounter.ToString();
 
-
+            
             if (cb_radmin.Checked)
             {
                 if (File.Exists(radminInstaller_DestPath))
                 {
-                    System.Diagnostics.Process.Start(radminInstaller_DestPath);
                     cbCounter = cbCounter + 1;
+                    this.richTextBox1.AppendText("Radmin instalado...\n");
+                    System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                    
                     progressBar1.Value = progressBar1.Value + 10;
                 }
                 else
@@ -113,6 +125,7 @@ namespace InstaladorAutomatico4
             {
                 if (File.Exists(ultravncInstaller_DestPath))
                 {
+                    this.richTextBox1.AppendText("UltraVNC instalado...\n");
                     System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
                     cbCounter = cbCounter + 1;
                     progressBar1.Value = progressBar1.Value + 10;
@@ -349,10 +362,24 @@ namespace InstaladorAutomatico4
                     System.Diagnostics.Process.Start(netagentInstaller_DestPath);
                 }
             }
+            if (cb_office.Checked)
+            {
+                if (File.Exists(officeInstaller_DestPath))
+                {
+                    System.Diagnostics.Process.Start(officeInstaller_DestPath);
+                    cbCounter = cbCounter + 1;
+                }
+                else
+                {
+                    Directory.CreateDirectory(officeDestPath);
+                    System.IO.File.Copy(netagentInstaller_SourcePath, officeInstaller_DestPath, true);
+                    System.Diagnostics.Process.Start(officeInstaller_DestPath);
+                }
+            }
             string cbCounterString = cbCounter.ToString();
             MessageBox.Show(cbCounterString);
 
-            cbCounter = 0;
+            //cbCounter = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -427,7 +454,7 @@ namespace InstaladorAutomatico4
             if (progressBar1.Value == 100)
             {
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
-                timer1.Stop();       // para o relógio
+                progressBar.Stop();       // para o relógio
             }
         }
 
@@ -444,6 +471,47 @@ namespace InstaladorAutomatico4
         private void button4_Click(object sender, EventArgs e)
         {
             cbCounter = 0;
+        }
+
+
+
+        private void statusBar1_PanelClick(object sender, StatusBarPanelClickEventArgs e)
+        {
+            MessageBox.Show("Clique");
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            statusBar1.Panels[0].Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+ 
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            Ping myPing = new Ping();
+            PingReply reply = myPing.Send("192.168.0.13", 10);
+            if (reply.Status == IPStatus.Success)
+            {
+                label_online.Text = "Servidor local encontrado.";
+                label_online.ForeColor = Color.Blue;
+
+            }
+            else
+            {
+                label_online.Text = "Online";
+                label_online.ForeColor = Color.Green;
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
