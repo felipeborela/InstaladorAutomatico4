@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
+using System.Net.NetworkInformation;
+
 
 namespace InstaladorAutomatico4
 {
@@ -87,12 +90,13 @@ namespace InstaladorAutomatico4
         string netagentInstaller_DestPath = @"C:\TI\NetAgent\InstalarNetAgent.bat";
 
         int cbCounter = 0;
+
         private void button1_Click(object sender, EventArgs e)
         {
             int progressCounter = 0;
             string progressCounterString = progressCounter.ToString();
 
-
+            
             if (cb_radmin.Checked)
             {
                 if (File.Exists(radminInstaller_DestPath))
@@ -427,7 +431,7 @@ namespace InstaladorAutomatico4
             if (progressBar1.Value == 100)
             {
                 FrmPrincipal frmPrincipal = new FrmPrincipal();
-                timer1.Stop();       // para o relógio
+                progressBar.Stop();       // para o relógio
             }
         }
 
@@ -444,6 +448,36 @@ namespace InstaladorAutomatico4
         private void button4_Click(object sender, EventArgs e)
         {
             cbCounter = 0;
+        }
+
+
+
+        private void statusBar1_PanelClick(object sender, StatusBarPanelClickEventArgs e)
+        {
+            MessageBox.Show("Clique");
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            statusBar1.Panels[0].Text = DateTime.Now.ToString("hh:mm:ss tt");
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Ping myPing = new Ping();
+            PingReply reply = myPing.Send("192.168.0.150", 10);
+            if (reply.Status == IPStatus.Success)
+            {
+                label_online.Text = "Servidor local encontrado.";
+                label_online.ForeColor = Color.Blue;
+                    
+            }
+            else
+            {
+                label_online.Text = "Online";
+                //label_online.TextAlign = CenterToParent;
+                label_online.ForeColor = Color.Green;
+            }
         }
     }
 }
