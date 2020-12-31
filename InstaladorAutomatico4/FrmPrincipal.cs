@@ -101,7 +101,6 @@ namespace InstaladorAutomatico4
         {
             int progressCounter = 0;
             string progressCounterString = progressCounter.ToString();
-
             
             if (cb_radmin.Checked)
             {
@@ -364,6 +363,7 @@ namespace InstaladorAutomatico4
             }
             if (cb_office.Checked)
             {
+                cbCounter = cbCounter + 1;
                 if (File.Exists(officeInstaller_DestPath))
                 {
                     System.Diagnostics.Process.Start(officeInstaller_DestPath);
@@ -372,14 +372,26 @@ namespace InstaladorAutomatico4
                 else
                 {
                     Directory.CreateDirectory(officeDestPath);
-                    System.IO.File.Copy(netagentInstaller_SourcePath, officeInstaller_DestPath, true);
+                    System.IO.File.Copy(officeInstaller_SourcePath, officeInstaller_DestPath, true);
                     System.Diagnostics.Process.Start(officeInstaller_DestPath);
                 }
+            }
+            else
+            {
+                cbCounter = cbCounter - 1;
             }
             string cbCounterString = cbCounter.ToString();
             MessageBox.Show(cbCounterString);
 
             //cbCounter = 0;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string cbCounterString = cbCounter.ToString();
+            MessageBox.Show(cbCounterString);
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -460,14 +472,6 @@ namespace InstaladorAutomatico4
 
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string cbCounterString = cbCounter.ToString();
-            MessageBox.Show(cbCounterString);
-
-            
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             cbCounter = 0;
@@ -513,5 +517,10 @@ namespace InstaladorAutomatico4
         {
 
         }
-    }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+    }//
 }

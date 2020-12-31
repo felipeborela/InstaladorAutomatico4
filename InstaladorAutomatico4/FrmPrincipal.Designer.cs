@@ -63,6 +63,7 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
+            this.cb_update = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
@@ -75,13 +76,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(408, 536);
+            this.tabControl1.Size = new System.Drawing.Size(408, 620);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.cb_update);
             this.tabPage1.Controls.Add(this.cb_office);
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.label_online);
@@ -111,7 +113,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(400, 510);
+            this.tabPage1.Size = new System.Drawing.Size(400, 594);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
             // 
@@ -130,10 +132,10 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox1.Location = new System.Drawing.Point(23, 312);
+            this.richTextBox1.Location = new System.Drawing.Point(23, 350);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(351, 192);
+            this.richTextBox1.Size = new System.Drawing.Size(351, 238);
             this.richTextBox1.TabIndex = 29;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -150,7 +152,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(139, 236);
+            this.button4.Location = new System.Drawing.Point(139, 276);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 27;
@@ -160,7 +162,7 @@
             // 
             // bt_verificar
             // 
-            this.bt_verificar.Location = new System.Drawing.Point(138, 206);
+            this.bt_verificar.Location = new System.Drawing.Point(138, 246);
             this.bt_verificar.Name = "bt_verificar";
             this.bt_verificar.Size = new System.Drawing.Size(76, 23);
             this.bt_verificar.TabIndex = 26;
@@ -170,7 +172,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 270);
+            this.progressBar1.Location = new System.Drawing.Point(22, 310);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(352, 23);
             this.progressBar1.Step = 1;
@@ -225,7 +227,7 @@
             // 
             // bt_unmarkall
             // 
-            this.bt_unmarkall.Location = new System.Drawing.Point(22, 235);
+            this.bt_unmarkall.Location = new System.Drawing.Point(22, 275);
             this.bt_unmarkall.Name = "bt_unmarkall";
             this.bt_unmarkall.Size = new System.Drawing.Size(110, 23);
             this.bt_unmarkall.TabIndex = 20;
@@ -235,7 +237,7 @@
             // 
             // bt_markall
             // 
-            this.bt_markall.Location = new System.Drawing.Point(22, 206);
+            this.bt_markall.Location = new System.Drawing.Point(22, 246);
             this.bt_markall.Name = "bt_markall";
             this.bt_markall.Size = new System.Drawing.Size(110, 23);
             this.bt_markall.TabIndex = 19;
@@ -245,7 +247,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(249, 206);
+            this.button1.Location = new System.Drawing.Point(249, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 52);
             this.button1.TabIndex = 16;
@@ -426,7 +428,7 @@
             // statusBar1
             // 
             this.statusBar1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusBar1.Location = new System.Drawing.Point(4, 542);
+            this.statusBar1.Location = new System.Drawing.Point(4, 626);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1});
@@ -453,13 +455,25 @@
             // infOnline
             // 
             this.infOnline.Enabled = true;
+            this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // cb_update
+            // 
+            this.cb_update.AutoSize = true;
+            this.cb_update.Location = new System.Drawing.Point(64, 211);
+            this.cb_update.Name = "cb_update";
+            this.cb_update.Size = new System.Drawing.Size(275, 17);
+            this.cb_update.TabIndex = 31;
+            this.cb_update.Text = "Atualizar softwares, se houver versões mais recentes";
+            this.cb_update.UseVisualStyleBackColor = true;
+            this.cb_update.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 563);
+            this.ClientSize = new System.Drawing.Size(407, 647);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmPrincipal";
@@ -509,6 +523,7 @@
         private System.Windows.Forms.Timer infOnline;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.CheckBox cb_office;
+        private System.Windows.Forms.CheckBox cb_update;
     }
 }
 
