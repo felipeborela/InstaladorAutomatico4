@@ -94,296 +94,321 @@ namespace InstaladorAutomatico4
         string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
 
         int cbCounter = 0;
-
-
-
+        
+  
         private void button1_Click(object sender, EventArgs e)
         {
-            int progressCounter = 0;
-            string progressCounterString = progressCounter.ToString();
-            
-            if (cb_radmin.Checked)
-            {
-                if (File.Exists(radminInstaller_DestPath))
-                {
-                    cbCounter = cbCounter + 1;
-                    this.richTextBox1.AppendText("Radmin instalado...\n");
-                    System.Diagnostics.Process.Start(radminInstaller_DestPath);
-                    
-                    progressBar1.Value = progressBar1.Value + 10;
-                }
-                else
-                {
-                    Directory.CreateDirectory(radminDestPath);
-                    System.IO.File.Copy(radminInstaller_SourcePath, radminInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(radminInstaller_DestPath);
-                }
-            }
+            int progressFwd = 0;
 
-            if (cb_ultravnc.Checked)
-            {
-                if (File.Exists(ultravncInstaller_DestPath))
-                {
-                    this.richTextBox1.AppendText("UltraVNC instalado...\n");
-                    System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                    progressBar1.Value = progressBar1.Value + 10;
-                }
-            else
-                {
-                    Directory.CreateDirectory(ultravncDestPath);
-                    System.IO.File.Copy(ultravncInstaller_SourcePath, ultravncInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
-                }
-            }
 
-            if (cb_teamviewer.Checked)
-            {
-                if (File.Exists(teamviewerInstaller_DestPath))
-                { 
-                    System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(teamviewerDestPath);
-                    System.IO.File.Copy(teamviewerInstaller_SourcePath, teamviewerInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
-                }
-            }
+            int number1 = 3000;
+            int number2 = 0;
            
-            if (cb_ammyy.Checked)
+            try
             {
-                if (File.Exists(ammyyInstaller_DestPath))
-                { 
-                    System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(ammyyDestPath);
-                    System.IO.File.Copy(ammyyInstaller_SourcePath, ammyyInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
+                progressFwd = 100 / cbCounter;
+            }
+            catch (DivideByZeroException)
+            {
+                if (cbCounter == 0) {
+                    MessageBox.Show("Selecione ao menos um");
                 }
             }
+            
 
-            if (cb_anydesk.Checked)
-            {
-                if (File.Exists(anydeskInstaller_DestPath))
-                { 
-                    System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(anydeskDestPath);
-                    System.IO.File.Copy(anydeskInstaller_SourcePath, anydeskInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
-                }
-            }
 
-            if (cb_libreoffice.Checked)
-            {
-                if (File.Exists(libreofficeInstaller_DestPath))
-                { 
-                    System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(libreofficeDestPath);
-                    System.IO.File.Copy(libreofficeInstaller_SourcePath, libreofficeInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
-                }
-            }
 
-            if (cb_ccleaner.Checked)
+            if (cb_update.Checked)
             {
-                if (File.Exists(ccleanerInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(ccleanerDestPath);
-                    System.IO.File.Copy(ccleanerInstaller_SourcePath, ccleanerInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
-                }
-            }
-
-            if (cb_chrome.Checked)
-            {
-                if (File.Exists(chromeInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(chromeInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(chromeDestPath);
-                    System.IO.File.Copy(chromeInstaller_SourcePath, chromeInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(chromeInstaller_DestPath);
-                }
-            }
-
-            if (cb_cutepdf.Checked)
-            {
-                if (File.Exists(cutepdfInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(cutepdfDestPath);
-                    System.IO.File.Copy(cutepdfInstaller_SourcePath, cutepdfInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
-                }
-            }
-
-            if (cb_fusioninventory.Checked)
-            {
-                if (File.Exists(fusioninventoryInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(fusioninventoryDestPath);
-                    System.IO.File.Copy(fusioninventoryInstaller_SourcePath, fusioninventoryInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
-                }
-            }
-
-            if (cb_spark.Checked)
-            {
-                if (File.Exists(sparkInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(sparkInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(sparkDestPath);
-                    System.IO.File.Copy(sparkInstaller_SourcePath, sparkInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(sparkInstaller_DestPath);
-                }
-            }
-
-            if (cb_thunderbird.Checked)
-            {
-                if (File.Exists(thunderbirdInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(thunderbirdDestPath);
-                    System.IO.File.Copy(thunderbirdInstaller_SourcePath, thunderbirdInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
-                }
-            }
-
-            if (cb_winrar.Checked)
-            {
-                if (File.Exists(winrarInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(winrarInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(winrarDestPath);
-                    System.IO.File.Copy(winrarInstaller_SourcePath, winrarInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(winrarInstaller_DestPath);
-                }
-            }
-
-            if (cb_klite.Checked)
-            {
-                if (File.Exists(kliteInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(kliteInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(kliteDestPath);
-                    System.IO.File.Copy(kliteInstaller_SourcePath, kliteInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(kliteInstaller_DestPath);
-                }
-            }
-
-            if (cb_globus.Checked)
-            {
-                if (File.Exists(globusInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(globusInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(globusDestPath);
-                    System.IO.File.Copy(globusInstaller_SourcePath, globusInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(globusInstaller_DestPath);
-                }
-            }
-
-            if (cb_avast.Checked)
-            {
-                if (File.Exists(avastInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(avastInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(avastDestPath);
-                    System.IO.File.Copy(avastInstaller_SourcePath, avastInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(avastInstaller_DestPath);
-                }
-            }
-
-            if (cb_netgent.Checked)
-            {
-                if (File.Exists(netagentInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(netagentInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(netagentDestPath);
-                    System.IO.File.Copy(netagentInstaller_SourcePath, netagentInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(netagentInstaller_DestPath);
-                }
-            }
-            if (cb_office.Checked)
-            {
-                cbCounter = cbCounter + 1;
-                if (File.Exists(officeInstaller_DestPath))
-                {
-                    System.Diagnostics.Process.Start(officeInstaller_DestPath);
-                    cbCounter = cbCounter + 1;
-                }
-                else
-                {
-                    Directory.CreateDirectory(officeDestPath);
-                    System.IO.File.Copy(officeInstaller_SourcePath, officeInstaller_DestPath, true);
-                    System.Diagnostics.Process.Start(officeInstaller_DestPath);
-                }
+                MessageBox.Show("Desenvolver...");
             }
             else
             {
-                cbCounter = cbCounter - 1;
+                if (cb_radmin.Checked)
+                {
+                    if (File.Exists(radminInstaller_DestPath))
+                    {
+                        cbCounter = cbCounter + 1;
+                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                        this.richTextBox1.AppendText("Radmin instalado...\n");
+                        progressBar1.Value = (progressBar1.Value + progressFwd);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(radminDestPath);
+                        System.IO.File.Copy(radminInstaller_SourcePath, radminInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                    }
+                }
+
+
+                if (cb_ultravnc.Checked)
+                {
+                    if (File.Exists(ultravncInstaller_DestPath))
+                    {
+                        this.richTextBox1.AppendText("UltraVNC instalado...\n");
+                        System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                        progressBar1.Value = progressBar1.Value + 10;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(ultravncDestPath);
+                        System.IO.File.Copy(ultravncInstaller_SourcePath, ultravncInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
+                    }
+                }
+
+                if (cb_teamviewer.Checked)
+                {
+                    if (File.Exists(teamviewerInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(teamviewerDestPath);
+                        System.IO.File.Copy(teamviewerInstaller_SourcePath, teamviewerInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
+                    }
+                }
+
+                if (cb_ammyy.Checked)
+                {
+                    if (File.Exists(ammyyInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(ammyyDestPath);
+                        System.IO.File.Copy(ammyyInstaller_SourcePath, ammyyInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
+                    }
+                }
+
+                if (cb_anydesk.Checked)
+                {
+                    if (File.Exists(anydeskInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(anydeskDestPath);
+                        System.IO.File.Copy(anydeskInstaller_SourcePath, anydeskInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
+                    }
+                }
+
+                if (cb_libreoffice.Checked)
+                {
+                    if (File.Exists(libreofficeInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(libreofficeDestPath);
+                        System.IO.File.Copy(libreofficeInstaller_SourcePath, libreofficeInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
+                    }
+                }
+
+                if (cb_ccleaner.Checked)
+                {
+                    if (File.Exists(ccleanerInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(ccleanerDestPath);
+                        System.IO.File.Copy(ccleanerInstaller_SourcePath, ccleanerInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
+                    }
+                }
+
+                if (cb_chrome.Checked)
+                {
+                    if (File.Exists(chromeInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(chromeInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(chromeDestPath);
+                        System.IO.File.Copy(chromeInstaller_SourcePath, chromeInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(chromeInstaller_DestPath);
+                    }
+                }
+
+                if (cb_cutepdf.Checked)
+                {
+                    if (File.Exists(cutepdfInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(cutepdfDestPath);
+                        System.IO.File.Copy(cutepdfInstaller_SourcePath, cutepdfInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
+                    }
+                }
+
+                if (cb_fusioninventory.Checked)
+                {
+                    if (File.Exists(fusioninventoryInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(fusioninventoryDestPath);
+                        System.IO.File.Copy(fusioninventoryInstaller_SourcePath, fusioninventoryInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
+                    }
+                }
+
+                if (cb_spark.Checked)
+                {
+                    if (File.Exists(sparkInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(sparkInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(sparkDestPath);
+                        System.IO.File.Copy(sparkInstaller_SourcePath, sparkInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(sparkInstaller_DestPath);
+                    }
+                }
+
+                if (cb_thunderbird.Checked)
+                {
+                    if (File.Exists(thunderbirdInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(thunderbirdDestPath);
+                        System.IO.File.Copy(thunderbirdInstaller_SourcePath, thunderbirdInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
+                    }
+                }
+
+                if (cb_winrar.Checked)
+                {
+                    if (File.Exists(winrarInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(winrarInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(winrarDestPath);
+                        System.IO.File.Copy(winrarInstaller_SourcePath, winrarInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(winrarInstaller_DestPath);
+                    }
+                }
+
+                if (cb_klite.Checked)
+                {
+                    if (File.Exists(kliteInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(kliteInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(kliteDestPath);
+                        System.IO.File.Copy(kliteInstaller_SourcePath, kliteInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(kliteInstaller_DestPath);
+                    }
+                }
+
+                if (cb_globus.Checked)
+                {
+                    if (File.Exists(globusInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(globusDestPath);
+                        System.IO.File.Copy(globusInstaller_SourcePath, globusInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
+                    }
+                }
+
+                if (cb_avast.Checked)
+                {
+                    if (File.Exists(avastInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(avastInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(avastDestPath);
+                        System.IO.File.Copy(avastInstaller_SourcePath, avastInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(avastInstaller_DestPath);
+                    }
+                }
+
+                if (cb_netgent.Checked)
+                {
+                    if (File.Exists(netagentInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(netagentInstaller_DestPath);
+                        cbCounter = cbCounter + 1;
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(netagentDestPath);
+                        System.IO.File.Copy(netagentInstaller_SourcePath, netagentInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(netagentInstaller_DestPath);
+                    }
+                }
+                if (cb_office.Checked)
+                {
+                    if (File.Exists(officeInstaller_DestPath))
+                    {
+                        cbCounter = cbCounter + 1;
+                        System.Diagnostics.Process.Start(officeInstaller_DestPath);
+                        this.richTextBox1.AppendText("Office instalado...\n");
+                        progressBar1.Value = (int)(progressBar1.Value + progressFwd);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(officeDestPath);
+                        System.IO.File.Copy(officeInstaller_SourcePath, officeInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(officeInstaller_DestPath);
+                    }
+                }
             }
+            
+
             string cbCounterString = cbCounter.ToString();
             MessageBox.Show(cbCounterString);
 
-            //cbCounter = 0;
+
+            cbCounter = 0;
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -522,5 +547,5 @@ namespace InstaladorAutomatico4
         {
 
         }
-    }//
+    }
 }

@@ -31,11 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cb_update = new System.Windows.Forms.CheckBox();
             this.cb_office = new System.Windows.Forms.CheckBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label_online = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.bt_verificar = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cb_avast = new System.Windows.Forms.CheckBox();
             this.cb_netgent = new System.Windows.Forms.CheckBox();
@@ -63,7 +62,6 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
-            this.cb_update = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
@@ -87,8 +85,6 @@
             this.tabPage1.Controls.Add(this.cb_office);
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.label_online);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.bt_verificar);
             this.tabPage1.Controls.Add(this.progressBar1);
             this.tabPage1.Controls.Add(this.cb_avast);
             this.tabPage1.Controls.Add(this.cb_netgent);
@@ -116,6 +112,17 @@
             this.tabPage1.Size = new System.Drawing.Size(400, 594);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
+            // 
+            // cb_update
+            // 
+            this.cb_update.AutoSize = true;
+            this.cb_update.Location = new System.Drawing.Point(195, 226);
+            this.cb_update.Name = "cb_update";
+            this.cb_update.Size = new System.Drawing.Size(180, 17);
+            this.cb_update.TabIndex = 31;
+            this.cb_update.Text = "Baixar novas versões da internet";
+            this.cb_update.UseVisualStyleBackColor = true;
+            this.cb_update.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // cb_office
             // 
@@ -149,26 +156,6 @@
             this.label_online.TabIndex = 28;
             this.label_online.Text = "Procurando servidor local...";
             this.label_online.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(139, 276);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Zerar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // bt_verificar
-            // 
-            this.bt_verificar.Location = new System.Drawing.Point(138, 246);
-            this.bt_verificar.Name = "bt_verificar";
-            this.bt_verificar.Size = new System.Drawing.Size(76, 23);
-            this.bt_verificar.TabIndex = 26;
-            this.bt_verificar.Text = "Verificar";
-            this.bt_verificar.UseVisualStyleBackColor = true;
-            this.bt_verificar.Click += new System.EventHandler(this.button3_Click);
             // 
             // progressBar1
             // 
@@ -229,7 +216,7 @@
             // 
             this.bt_unmarkall.Location = new System.Drawing.Point(22, 275);
             this.bt_unmarkall.Name = "bt_unmarkall";
-            this.bt_unmarkall.Size = new System.Drawing.Size(110, 23);
+            this.bt_unmarkall.Size = new System.Drawing.Size(161, 23);
             this.bt_unmarkall.TabIndex = 20;
             this.bt_unmarkall.Text = "Desmarcar todos";
             this.bt_unmarkall.UseVisualStyleBackColor = true;
@@ -239,7 +226,7 @@
             // 
             this.bt_markall.Location = new System.Drawing.Point(22, 246);
             this.bt_markall.Name = "bt_markall";
-            this.bt_markall.Size = new System.Drawing.Size(110, 23);
+            this.bt_markall.Size = new System.Drawing.Size(161, 23);
             this.bt_markall.TabIndex = 19;
             this.bt_markall.Text = "Marcar todos";
             this.bt_markall.UseVisualStyleBackColor = true;
@@ -247,9 +234,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(249, 246);
+            this.button1.Location = new System.Drawing.Point(194, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 52);
+            this.button1.Size = new System.Drawing.Size(180, 52);
             this.button1.TabIndex = 16;
             this.button1.Text = "INSTALAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -417,7 +404,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(400, 510);
+            this.tabPage2.Size = new System.Drawing.Size(400, 594);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
             // 
@@ -458,25 +445,17 @@
             this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // cb_update
-            // 
-            this.cb_update.AutoSize = true;
-            this.cb_update.Location = new System.Drawing.Point(64, 211);
-            this.cb_update.Name = "cb_update";
-            this.cb_update.Size = new System.Drawing.Size(275, 17);
-            this.cb_update.TabIndex = 31;
-            this.cb_update.Text = "Atualizar softwares, se houver versões mais recentes";
-            this.cb_update.UseVisualStyleBackColor = true;
-            this.cb_update.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(407, 647);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Instalador Automático v4.0";
             this.Load += new System.EventHandler(this.principal_Load);
             this.tabControl1.ResumeLayout(false);
@@ -514,8 +493,6 @@
         private System.Windows.Forms.CheckBox cb_netgent;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer progressBar;
-        private System.Windows.Forms.Button bt_verificar;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.StatusBar statusBar1;
         private System.Windows.Forms.StatusBarPanel statusBarPanel1;
         private System.Windows.Forms.Timer time;
