@@ -101,9 +101,7 @@ namespace InstaladorAutomatico4
             int progressFwd = 0;
 
 
-            int number1 = 3000;
-            int number2 = 0;
-           
+                  
             try
             {
                 progressFwd = 100 / cbCounter;
@@ -111,6 +109,10 @@ namespace InstaladorAutomatico4
             catch (DivideByZeroException)
             {
                 if (cbCounter == 0) {
+                    
+                }
+                else
+                {
                     MessageBox.Show("Selecione ao menos um");
                 }
             }
@@ -146,10 +148,10 @@ namespace InstaladorAutomatico4
                 {
                     if (File.Exists(ultravncInstaller_DestPath))
                     {
-                        this.richTextBox1.AppendText("UltraVNC instalado...\n");
-                        System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
                         cbCounter = cbCounter + 1;
-                        progressBar1.Value = progressBar1.Value + 10;
+                        System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
+                        this.richTextBox1.AppendText("UltraVNC instalado...\n");
+                        progressBar1.Value = (progressBar1.Value + progressFwd);
                     }
                     else
                     {
@@ -400,10 +402,13 @@ namespace InstaladorAutomatico4
                     }
                 }
             }
-            
+
 
             string cbCounterString = cbCounter.ToString();
             MessageBox.Show(cbCounterString);
+
+            string progressFwString = progressFwd.ToString();
+            MessageBox.Show(progressFwString);
 
 
             cbCounter = 0;
