@@ -33,9 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cb_update = new System.Windows.Forms.CheckBox();
             this.cb_office = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label_online = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cb_avast = new System.Windows.Forms.CheckBox();
             this.cb_netgent = new System.Windows.Forms.CheckBox();
             this.cb_globus = new System.Windows.Forms.CheckBox();
@@ -74,7 +72,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(408, 620);
+            this.tabControl1.Size = new System.Drawing.Size(449, 360);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
@@ -83,9 +81,7 @@
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.cb_update);
             this.tabPage1.Controls.Add(this.cb_office);
-            this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.label_online);
-            this.tabPage1.Controls.Add(this.progressBar1);
             this.tabPage1.Controls.Add(this.cb_avast);
             this.tabPage1.Controls.Add(this.cb_netgent);
             this.tabPage1.Controls.Add(this.cb_globus);
@@ -109,7 +105,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(400, 594);
+            this.tabPage1.Size = new System.Drawing.Size(441, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
             // 
@@ -128,7 +124,7 @@
             // 
             this.cb_office.AutoSize = true;
             this.cb_office.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cb_office.Location = new System.Drawing.Point(249, 172);
+            this.cb_office.Location = new System.Drawing.Point(307, 172);
             this.cb_office.Name = "cb_office";
             this.cb_office.Size = new System.Drawing.Size(100, 17);
             this.cb_office.TabIndex = 30;
@@ -136,40 +132,21 @@
             this.cb_office.UseVisualStyleBackColor = true;
             this.cb_office.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.richTextBox1.Location = new System.Drawing.Point(23, 350);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(351, 238);
-            this.richTextBox1.TabIndex = 29;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
             // label_online
             // 
             this.label_online.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_online.Location = new System.Drawing.Point(83, 16);
+            this.label_online.Location = new System.Drawing.Point(38, 15);
             this.label_online.Name = "label_online";
-            this.label_online.Size = new System.Drawing.Size(219, 19);
+            this.label_online.Size = new System.Drawing.Size(311, 19);
             this.label_online.TabIndex = 28;
             this.label_online.Text = "Procurando servidor local...";
             this.label_online.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(22, 310);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(352, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 25;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.label_online.Click += new System.EventHandler(this.label_online_Click);
             // 
             // cb_avast
             // 
             this.cb_avast.AutoSize = true;
-            this.cb_avast.Location = new System.Drawing.Point(249, 149);
+            this.cb_avast.Location = new System.Drawing.Point(307, 149);
             this.cb_avast.Name = "cb_avast";
             this.cb_avast.Size = new System.Drawing.Size(53, 17);
             this.cb_avast.TabIndex = 24;
@@ -181,7 +158,7 @@
             this.cb_netgent.AutoSize = true;
             this.cb_netgent.Checked = true;
             this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_netgent.Location = new System.Drawing.Point(249, 126);
+            this.cb_netgent.Location = new System.Drawing.Point(307, 126);
             this.cb_netgent.Name = "cb_netgent";
             this.cb_netgent.Size = new System.Drawing.Size(126, 17);
             this.cb_netgent.TabIndex = 23;
@@ -193,7 +170,7 @@
             this.cb_globus.AutoSize = true;
             this.cb_globus.Checked = true;
             this.cb_globus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_globus.Location = new System.Drawing.Point(249, 102);
+            this.cb_globus.Location = new System.Drawing.Point(307, 102);
             this.cb_globus.Name = "cb_globus";
             this.cb_globus.Size = new System.Drawing.Size(59, 17);
             this.cb_globus.TabIndex = 22;
@@ -205,7 +182,7 @@
             this.cb_ccleaner.AutoSize = true;
             this.cb_ccleaner.Checked = true;
             this.cb_ccleaner.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ccleaner.Location = new System.Drawing.Point(129, 56);
+            this.cb_ccleaner.Location = new System.Drawing.Point(173, 56);
             this.cb_ccleaner.Name = "cb_ccleaner";
             this.cb_ccleaner.Size = new System.Drawing.Size(69, 17);
             this.cb_ccleaner.TabIndex = 21;
@@ -247,7 +224,7 @@
             this.cb_klite.AutoSize = true;
             this.cb_klite.Checked = true;
             this.cb_klite.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_klite.Location = new System.Drawing.Point(249, 79);
+            this.cb_klite.Location = new System.Drawing.Point(307, 79);
             this.cb_klite.Name = "cb_klite";
             this.cb_klite.Size = new System.Drawing.Size(112, 17);
             this.cb_klite.TabIndex = 15;
@@ -259,7 +236,7 @@
             this.cb_winrar.AutoSize = true;
             this.cb_winrar.Checked = true;
             this.cb_winrar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_winrar.Location = new System.Drawing.Point(249, 56);
+            this.cb_winrar.Location = new System.Drawing.Point(307, 56);
             this.cb_winrar.Name = "cb_winrar";
             this.cb_winrar.Size = new System.Drawing.Size(68, 17);
             this.cb_winrar.TabIndex = 14;
@@ -271,7 +248,7 @@
             this.cb_thunderbird.AutoSize = true;
             this.cb_thunderbird.Checked = true;
             this.cb_thunderbird.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_thunderbird.Location = new System.Drawing.Point(129, 172);
+            this.cb_thunderbird.Location = new System.Drawing.Point(173, 172);
             this.cb_thunderbird.Name = "cb_thunderbird";
             this.cb_thunderbird.Size = new System.Drawing.Size(83, 17);
             this.cb_thunderbird.TabIndex = 13;
@@ -283,7 +260,7 @@
             this.cb_spark.AutoSize = true;
             this.cb_spark.Checked = true;
             this.cb_spark.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_spark.Location = new System.Drawing.Point(129, 149);
+            this.cb_spark.Location = new System.Drawing.Point(173, 149);
             this.cb_spark.Name = "cb_spark";
             this.cb_spark.Size = new System.Drawing.Size(54, 17);
             this.cb_spark.TabIndex = 12;
@@ -295,7 +272,7 @@
             this.cb_libreoffice.AutoSize = true;
             this.cb_libreoffice.Checked = true;
             this.cb_libreoffice.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_libreoffice.Location = new System.Drawing.Point(23, 172);
+            this.cb_libreoffice.Location = new System.Drawing.Point(42, 172);
             this.cb_libreoffice.Name = "cb_libreoffice";
             this.cb_libreoffice.Size = new System.Drawing.Size(77, 17);
             this.cb_libreoffice.TabIndex = 11;
@@ -307,7 +284,7 @@
             this.cb_fusioninventory.AutoSize = true;
             this.cb_fusioninventory.Checked = true;
             this.cb_fusioninventory.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_fusioninventory.Location = new System.Drawing.Point(129, 126);
+            this.cb_fusioninventory.Location = new System.Drawing.Point(173, 126);
             this.cb_fusioninventory.Name = "cb_fusioninventory";
             this.cb_fusioninventory.Size = new System.Drawing.Size(104, 17);
             this.cb_fusioninventory.TabIndex = 10;
@@ -319,7 +296,7 @@
             this.cb_cutepdf.AutoSize = true;
             this.cb_cutepdf.Checked = true;
             this.cb_cutepdf.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_cutepdf.Location = new System.Drawing.Point(129, 103);
+            this.cb_cutepdf.Location = new System.Drawing.Point(173, 103);
             this.cb_cutepdf.Name = "cb_cutepdf";
             this.cb_cutepdf.Size = new System.Drawing.Size(69, 17);
             this.cb_cutepdf.TabIndex = 9;
@@ -331,7 +308,7 @@
             this.cb_chrome.AutoSize = true;
             this.cb_chrome.Checked = true;
             this.cb_chrome.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_chrome.Location = new System.Drawing.Point(129, 79);
+            this.cb_chrome.Location = new System.Drawing.Point(173, 79);
             this.cb_chrome.Name = "cb_chrome";
             this.cb_chrome.Size = new System.Drawing.Size(99, 17);
             this.cb_chrome.TabIndex = 8;
@@ -343,7 +320,7 @@
             this.cb_anydesk.AutoSize = true;
             this.cb_anydesk.Checked = true;
             this.cb_anydesk.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_anydesk.Location = new System.Drawing.Point(23, 149);
+            this.cb_anydesk.Location = new System.Drawing.Point(42, 149);
             this.cb_anydesk.Name = "cb_anydesk";
             this.cb_anydesk.Size = new System.Drawing.Size(69, 17);
             this.cb_anydesk.TabIndex = 4;
@@ -355,7 +332,7 @@
             this.cb_ammyy.AutoSize = true;
             this.cb_ammyy.Checked = true;
             this.cb_ammyy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ammyy.Location = new System.Drawing.Point(23, 126);
+            this.cb_ammyy.Location = new System.Drawing.Point(42, 126);
             this.cb_ammyy.Name = "cb_ammyy";
             this.cb_ammyy.Size = new System.Drawing.Size(59, 17);
             this.cb_ammyy.TabIndex = 3;
@@ -367,7 +344,7 @@
             this.cb_teamviewer.AutoSize = true;
             this.cb_teamviewer.Checked = true;
             this.cb_teamviewer.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_teamviewer.Location = new System.Drawing.Point(23, 102);
+            this.cb_teamviewer.Location = new System.Drawing.Point(42, 102);
             this.cb_teamviewer.Name = "cb_teamviewer";
             this.cb_teamviewer.Size = new System.Drawing.Size(85, 17);
             this.cb_teamviewer.TabIndex = 2;
@@ -379,7 +356,7 @@
             this.cb_ultravnc.AutoSize = true;
             this.cb_ultravnc.Checked = true;
             this.cb_ultravnc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ultravnc.Location = new System.Drawing.Point(23, 79);
+            this.cb_ultravnc.Location = new System.Drawing.Point(42, 79);
             this.cb_ultravnc.Name = "cb_ultravnc";
             this.cb_ultravnc.Size = new System.Drawing.Size(70, 17);
             this.cb_ultravnc.TabIndex = 1;
@@ -391,7 +368,7 @@
             this.cb_radmin.AutoSize = true;
             this.cb_radmin.Checked = true;
             this.cb_radmin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_radmin.Location = new System.Drawing.Point(23, 56);
+            this.cb_radmin.Location = new System.Drawing.Point(42, 56);
             this.cb_radmin.Name = "cb_radmin";
             this.cb_radmin.Size = new System.Drawing.Size(62, 17);
             this.cb_radmin.TabIndex = 0;
@@ -415,13 +392,13 @@
             // statusBar1
             // 
             this.statusBar1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusBar1.Location = new System.Drawing.Point(4, 626);
+            this.statusBar1.Location = new System.Drawing.Point(8, 362);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1});
             this.statusBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.statusBar1.ShowPanels = true;
-            this.statusBar1.Size = new System.Drawing.Size(400, 22);
+            this.statusBar1.Size = new System.Drawing.Size(437, 22);
             this.statusBar1.SizingGrip = false;
             this.statusBar1.TabIndex = 1;
             this.statusBar1.Text = "statusBar1";
@@ -450,7 +427,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(407, 647);
+            this.ClientSize = new System.Drawing.Size(450, 391);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
@@ -491,14 +468,12 @@
         private System.Windows.Forms.CheckBox cb_globus;
         private System.Windows.Forms.CheckBox cb_avast;
         private System.Windows.Forms.CheckBox cb_netgent;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer progressBar;
         private System.Windows.Forms.StatusBar statusBar1;
         private System.Windows.Forms.StatusBarPanel statusBarPanel1;
         private System.Windows.Forms.Timer time;
         private System.Windows.Forms.Label label_online;
         private System.Windows.Forms.Timer infOnline;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.CheckBox cb_office;
         private System.Windows.Forms.CheckBox cb_update;
     }

@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
-using System.Net;
 using System.Net.NetworkInformation;
+using System.Windows.Forms;
 
 
 namespace InstaladorAutomatico4
@@ -94,29 +87,30 @@ namespace InstaladorAutomatico4
         string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
 
         int cbCounter = 0;
-        
-  
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             int progressFwd = 0;
 
 
-                  
+
             try
             {
                 progressFwd = 100 / cbCounter;
             }
             catch (DivideByZeroException)
             {
-                if (cbCounter == 0) {
-                    
+                if (cbCounter == 0)
+                {
+
                 }
                 else
                 {
                     MessageBox.Show("Selecione ao menos um");
                 }
             }
-            
+
 
 
 
@@ -442,7 +436,7 @@ namespace InstaladorAutomatico4
             cb_klite.Checked = true;
             cb_globus.Checked = true;
             cb_netgent.Checked = true;
-            
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -519,23 +513,35 @@ namespace InstaladorAutomatico4
             statusBar1.Panels[0].Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
- 
+
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             Ping myPing = new Ping();
-            PingReply reply = myPing.Send("192.168.0.13", 10);
-            if (reply.Status == IPStatus.Success)
-            {
-                label_online.Text = "Servidor local encontrado.";
-                label_online.ForeColor = Color.Blue;
+            
 
-            }
-            else
+            try
             {
-                label_online.Text = "Online";
-                label_online.ForeColor = Color.Green;
+                PingReply reply = myPing.Send("192.168.0.13", 10);
+                if (reply.Status == IPStatus.Success)
+                {
+                    label_online.Text = "Servidor local encontrado";
+                    label_online.ForeColor = Color.Blue;
+
+                }
+                else
+                {
+                    label_online.Text = "Online";
+                    label_online.ForeColor = Color.Green;
+                }
             }
+           
+            catch
+            {
+                label_online.Text = "Trabalhando em modo offline";
+                label_online.ForeColor = Color.Red;
+            }
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -552,5 +558,11 @@ namespace InstaladorAutomatico4
         {
 
         }
+
+        private void label_online_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+//ok 09022021
