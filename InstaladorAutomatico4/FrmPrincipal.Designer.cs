@@ -55,7 +55,6 @@
             this.cb_ultravnc = new System.Windows.Forms.CheckBox();
             this.cb_radmin = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.progressBar = new System.Windows.Forms.Timer(this.components);
             this.statusBar1 = new System.Windows.Forms.StatusBar();
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
@@ -389,24 +388,20 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(441, 334);
+            this.tabPage2.Size = new System.Drawing.Size(441, 344);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
-            // 
-            // progressBar
-            // 
-            this.progressBar.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // statusBar1
             // 
             this.statusBar1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusBar1.Location = new System.Drawing.Point(8, 362);
+            this.statusBar1.Location = new System.Drawing.Point(8, 366);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1});
             this.statusBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.statusBar1.ShowPanels = true;
-            this.statusBar1.Size = new System.Drawing.Size(437, 22);
+            this.statusBar1.Size = new System.Drawing.Size(437, 17);
             this.statusBar1.SizingGrip = false;
             this.statusBar1.TabIndex = 1;
             this.statusBar1.Text = "statusBar1";
@@ -498,7 +493,6 @@
         private System.Windows.Forms.CheckBox cb_globus;
         private System.Windows.Forms.CheckBox cb_avast;
         private System.Windows.Forms.CheckBox cb_netgent;
-        private System.Windows.Forms.Timer progressBar;
         private System.Windows.Forms.StatusBar statusBar1;
         private System.Windows.Forms.StatusBarPanel statusBarPanel1;
         private System.Windows.Forms.Timer time;
