@@ -60,9 +60,13 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
+            this.pb_Radmin = new System.Windows.Forms.PictureBox();
+            this.pb_UltraVNC = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -79,6 +83,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.pb_UltraVNC);
+            this.tabPage1.Controls.Add(this.pb_Radmin);
             this.tabPage1.Controls.Add(this.cb_update);
             this.tabPage1.Controls.Add(this.cb_office);
             this.tabPage1.Controls.Add(this.label_online);
@@ -424,6 +430,26 @@
             this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // pb_Radmin
+            // 
+            this.pb_Radmin.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Radmin.Location = new System.Drawing.Point(16, 65);
+            this.pb_Radmin.Name = "pb_Radmin";
+            this.pb_Radmin.Size = new System.Drawing.Size(20, 20);
+            this.pb_Radmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Radmin.TabIndex = 32;
+            this.pb_Radmin.TabStop = false;
+            // 
+            // pb_UltraVNC
+            // 
+            this.pb_UltraVNC.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_UltraVNC.Location = new System.Drawing.Point(16, 88);
+            this.pb_UltraVNC.Name = "pb_UltraVNC";
+            this.pb_UltraVNC.Size = new System.Drawing.Size(20, 20);
+            this.pb_UltraVNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_UltraVNC.TabIndex = 33;
+            this.pb_UltraVNC.TabStop = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,6 +467,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,6 +506,8 @@
         private System.Windows.Forms.Timer infOnline;
         private System.Windows.Forms.CheckBox cb_office;
         private System.Windows.Forms.CheckBox cb_update;
+        private System.Windows.Forms.PictureBox pb_UltraVNC;
+        private System.Windows.Forms.PictureBox pb_Radmin;
     }
 }
 
