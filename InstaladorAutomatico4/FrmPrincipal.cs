@@ -445,6 +445,97 @@ namespace InstaladorAutomatico4
         private void timer2_Tick(object sender, EventArgs e)
         {
             statusBar1.Panels[0].Text = DateTime.Now.ToString("hh:mm:ss tt");
+
+            if ((File.Exists("C:\\Windows\\SysWOW64\\rserver30\\rserver3.exe")) || (File.Exists("C:\\Windows\\System32\\rserver30\\rserver3.exe")))
+            {
+                pb_Radmin.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Radmin.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\uvnc bvba\\UltraVNC\\winvnc.exe")) || (File.Exists("C:\\Program Files (x86)\\uvnc bvba\\UltraVNC\\winvnc.exe")))
+            {
+                pb_UltraVNC.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_UltraVNC.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files (x86)\\TeamViewer\\TeamViewer.exe")) || (File.Exists("C:\\Program Files\\TeamViewer\\TeamViewer.exe")))
+            {
+                pb_TeamViewer.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_TeamViewer.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\TI\\Ammyy\\Ammyy_v3.5.exe")) || (File.Exists("C:\\TI\\Ammyy\\Ammyy.exe")))
+            {
+                pb_Ammyy.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Ammyy.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files (x86)\\AnyDesk\\AnyDesk.exe")) || (File.Exists("C:\\Program Files\\AnyDesk\\AnyDesk.exe")))
+            {
+                pb_AnyDesk.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_AnyDesk.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\LibreOffice\\program\\soffice.exe")) || (File.Exists("C:\\Program Files\\LibreOffice (x86)\\program\\soffice.exe")))
+            {
+                pb_LibreOffice.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_LibreOffice.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\CCleaner\\CCleaner.exe")) || (File.Exists("C:\\Program Files (x86)\\CCleaner\\CCleaner.exe")))
+            {
+                pb_CCleaner.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_CCleaner.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe")) || (File.Exists("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe")))
+            {
+                pb_Chrome.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Chrome.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files (x86)\\Acro Software\\CutePDF Writer\\CPWSave.exe")) || (File.Exists("C:\\Program Files\\Acro Software\\CutePDF Writer\\CPWSave.exe")))
+            {
+                pb_CutePDF.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_CutePDF.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\FusionInventory-Agent\\perl\\bin\\fusioninventory-agent.exe")) || (File.Exists("C:\\Program Files (x86)\\FusionInventory-Agent\\perl\\bin\\fusioninventory-agent.exe")))
+            {
+                pb_FusionInventory.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_FusionInventory.Image = Properties.Resources.check_error;
+            }
+
         }
 
 
@@ -452,7 +543,7 @@ namespace InstaladorAutomatico4
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             Ping myPing = new Ping();
-            
+
 
             try
             {
@@ -469,7 +560,7 @@ namespace InstaladorAutomatico4
                     label_online.ForeColor = Color.Green;
                 }
             }
-           
+
             catch
             {
                 label_online.Text = "Trabalhando em modo offline";
