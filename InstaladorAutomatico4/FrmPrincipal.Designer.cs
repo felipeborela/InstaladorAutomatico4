@@ -112,7 +112,7 @@
             // cb_update
             // 
             this.cb_update.AutoSize = true;
-            this.cb_update.Location = new System.Drawing.Point(195, 226);
+            this.cb_update.Location = new System.Drawing.Point(227, 227);
             this.cb_update.Name = "cb_update";
             this.cb_update.Size = new System.Drawing.Size(180, 17);
             this.cb_update.TabIndex = 31;
@@ -193,7 +193,7 @@
             // 
             this.bt_unmarkall.Location = new System.Drawing.Point(22, 275);
             this.bt_unmarkall.Name = "bt_unmarkall";
-            this.bt_unmarkall.Size = new System.Drawing.Size(161, 23);
+            this.bt_unmarkall.Size = new System.Drawing.Size(181, 23);
             this.bt_unmarkall.TabIndex = 20;
             this.bt_unmarkall.Text = "Desmarcar todos";
             this.bt_unmarkall.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             // 
             this.bt_markall.Location = new System.Drawing.Point(22, 246);
             this.bt_markall.Name = "bt_markall";
-            this.bt_markall.Size = new System.Drawing.Size(161, 23);
+            this.bt_markall.Size = new System.Drawing.Size(181, 23);
             this.bt_markall.TabIndex = 19;
             this.bt_markall.Text = "Marcar todos";
             this.bt_markall.UseVisualStyleBackColor = true;
@@ -211,9 +211,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(194, 246);
+            this.button1.Location = new System.Drawing.Point(209, 246);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 52);
+            this.button1.Size = new System.Drawing.Size(210, 52);
             this.button1.TabIndex = 16;
             this.button1.Text = "INSTALAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -381,7 +381,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(400, 594);
+            this.tabPage2.Size = new System.Drawing.Size(441, 334);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
             // 

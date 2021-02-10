@@ -86,32 +86,9 @@ namespace InstaladorAutomatico4
         string officeDestPath = @"C:\TI\Office\";
         string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
 
-        int cbCounter = 0;
-
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int progressFwd = 0;
-
-
-
-            try
-            {
-                progressFwd = 100 / cbCounter;
-            }
-            catch (DivideByZeroException)
-            {
-                if (cbCounter == 0)
-                {
-
-                }
-                else
-                {
-                    MessageBox.Show("Selecione ao menos um");
-                }
-            }
-
-
 
 
             if (cb_update.Checked)
@@ -124,10 +101,7 @@ namespace InstaladorAutomatico4
                 {
                     if (File.Exists(radminInstaller_DestPath))
                     {
-                        cbCounter = cbCounter + 1;
                         System.Diagnostics.Process.Start(radminInstaller_DestPath);
-                        this.richTextBox1.AppendText("Radmin instalado...\n");
-                        progressBar1.Value = (progressBar1.Value + progressFwd);
                     }
                     else
                     {
@@ -142,10 +116,7 @@ namespace InstaladorAutomatico4
                 {
                     if (File.Exists(ultravncInstaller_DestPath))
                     {
-                        cbCounter = cbCounter + 1;
                         System.Diagnostics.Process.Start(ultravncInstaller_DestPath);
-                        this.richTextBox1.AppendText("UltraVNC instalado...\n");
-                        progressBar1.Value = (progressBar1.Value + progressFwd);
                     }
                     else
                     {
@@ -160,7 +131,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(teamviewerInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -175,7 +145,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(ammyyInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(ammyyInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -190,7 +159,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(anydeskInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(anydeskInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -205,7 +173,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(libreofficeInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(libreofficeInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -220,7 +187,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(ccleanerInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(ccleanerInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -235,7 +201,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(chromeInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(chromeInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -250,7 +215,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(cutepdfInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(cutepdfInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -265,7 +229,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(fusioninventoryInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -280,7 +243,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(sparkInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(sparkInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -295,7 +257,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(thunderbirdInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(thunderbirdInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -310,7 +271,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(winrarInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(winrarInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -325,7 +285,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(kliteInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(kliteInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -340,7 +299,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(globusInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(globusInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -355,7 +313,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(avastInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(avastInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -370,7 +327,6 @@ namespace InstaladorAutomatico4
                     if (File.Exists(netagentInstaller_DestPath))
                     {
                         System.Diagnostics.Process.Start(netagentInstaller_DestPath);
-                        cbCounter = cbCounter + 1;
                     }
                     else
                     {
@@ -383,10 +339,7 @@ namespace InstaladorAutomatico4
                 {
                     if (File.Exists(officeInstaller_DestPath))
                     {
-                        cbCounter = cbCounter + 1;
                         System.Diagnostics.Process.Start(officeInstaller_DestPath);
-                        this.richTextBox1.AppendText("Office instalado...\n");
-                        progressBar1.Value = (int)(progressBar1.Value + progressFwd);
                     }
                     else
                     {
@@ -398,24 +351,12 @@ namespace InstaladorAutomatico4
             }
 
 
-            string cbCounterString = cbCounter.ToString();
-            MessageBox.Show(cbCounterString);
-
-            string progressFwString = progressFwd.ToString();
-            MessageBox.Show(progressFwString);
-
-
-            cbCounter = 0;
-
-
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string cbCounterString = cbCounter.ToString();
-            MessageBox.Show(cbCounterString);
-
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -483,22 +424,13 @@ namespace InstaladorAutomatico4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBar1.Value < 100)
-            {
-                progressBar1.Value = progressBar1.Value + 10;
-            }
-            if (progressBar1.Value == 100)
-            {
-                FrmPrincipal frmPrincipal = new FrmPrincipal();
-                progressBar.Stop();       // para o relógio
-            }
         }
 
 
 
         private void button4_Click(object sender, EventArgs e)
         {
-            cbCounter = 0;
+
         }
 
 
@@ -566,3 +498,4 @@ namespace InstaladorAutomatico4
     }
 }
 //ok 09022021
+//ok
