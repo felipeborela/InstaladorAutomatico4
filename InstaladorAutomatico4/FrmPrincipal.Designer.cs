@@ -112,7 +112,7 @@
             // cb_update
             // 
             this.cb_update.AutoSize = true;
-            this.cb_update.Location = new System.Drawing.Point(227, 227);
+            this.cb_update.Location = new System.Drawing.Point(227, 239);
             this.cb_update.Name = "cb_update";
             this.cb_update.Size = new System.Drawing.Size(180, 17);
             this.cb_update.TabIndex = 31;
@@ -124,7 +124,7 @@
             // 
             this.cb_office.AutoSize = true;
             this.cb_office.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cb_office.Location = new System.Drawing.Point(307, 172);
+            this.cb_office.Location = new System.Drawing.Point(307, 184);
             this.cb_office.Name = "cb_office";
             this.cb_office.Size = new System.Drawing.Size(100, 17);
             this.cb_office.TabIndex = 30;
@@ -135,7 +135,7 @@
             // label_online
             // 
             this.label_online.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_online.Location = new System.Drawing.Point(38, 15);
+            this.label_online.Location = new System.Drawing.Point(74, 15);
             this.label_online.Name = "label_online";
             this.label_online.Size = new System.Drawing.Size(311, 19);
             this.label_online.TabIndex = 28;
@@ -146,7 +146,7 @@
             // cb_avast
             // 
             this.cb_avast.AutoSize = true;
-            this.cb_avast.Location = new System.Drawing.Point(307, 149);
+            this.cb_avast.Location = new System.Drawing.Point(307, 161);
             this.cb_avast.Name = "cb_avast";
             this.cb_avast.Size = new System.Drawing.Size(53, 17);
             this.cb_avast.TabIndex = 24;
@@ -158,7 +158,7 @@
             this.cb_netgent.AutoSize = true;
             this.cb_netgent.Checked = true;
             this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_netgent.Location = new System.Drawing.Point(307, 126);
+            this.cb_netgent.Location = new System.Drawing.Point(307, 138);
             this.cb_netgent.Name = "cb_netgent";
             this.cb_netgent.Size = new System.Drawing.Size(126, 17);
             this.cb_netgent.TabIndex = 23;
@@ -170,7 +170,7 @@
             this.cb_globus.AutoSize = true;
             this.cb_globus.Checked = true;
             this.cb_globus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_globus.Location = new System.Drawing.Point(307, 102);
+            this.cb_globus.Location = new System.Drawing.Point(307, 114);
             this.cb_globus.Name = "cb_globus";
             this.cb_globus.Size = new System.Drawing.Size(59, 17);
             this.cb_globus.TabIndex = 22;
@@ -182,7 +182,7 @@
             this.cb_ccleaner.AutoSize = true;
             this.cb_ccleaner.Checked = true;
             this.cb_ccleaner.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ccleaner.Location = new System.Drawing.Point(173, 56);
+            this.cb_ccleaner.Location = new System.Drawing.Point(173, 68);
             this.cb_ccleaner.Name = "cb_ccleaner";
             this.cb_ccleaner.Size = new System.Drawing.Size(69, 17);
             this.cb_ccleaner.TabIndex = 21;
@@ -191,9 +191,9 @@
             // 
             // bt_unmarkall
             // 
-            this.bt_unmarkall.Location = new System.Drawing.Point(22, 275);
+            this.bt_unmarkall.Location = new System.Drawing.Point(22, 291);
             this.bt_unmarkall.Name = "bt_unmarkall";
-            this.bt_unmarkall.Size = new System.Drawing.Size(181, 23);
+            this.bt_unmarkall.Size = new System.Drawing.Size(188, 23);
             this.bt_unmarkall.TabIndex = 20;
             this.bt_unmarkall.Text = "Desmarcar todos";
             this.bt_unmarkall.UseVisualStyleBackColor = true;
@@ -201,9 +201,9 @@
             // 
             // bt_markall
             // 
-            this.bt_markall.Location = new System.Drawing.Point(22, 246);
+            this.bt_markall.Location = new System.Drawing.Point(22, 262);
             this.bt_markall.Name = "bt_markall";
-            this.bt_markall.Size = new System.Drawing.Size(181, 23);
+            this.bt_markall.Size = new System.Drawing.Size(188, 23);
             this.bt_markall.TabIndex = 19;
             this.bt_markall.Text = "Marcar todos";
             this.bt_markall.UseVisualStyleBackColor = true;
@@ -211,12 +211,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(209, 246);
+            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(216, 262);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 52);
+            this.button1.Size = new System.Drawing.Size(203, 52);
             this.button1.TabIndex = 16;
             this.button1.Text = "INSTALAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cb_klite
@@ -224,7 +226,7 @@
             this.cb_klite.AutoSize = true;
             this.cb_klite.Checked = true;
             this.cb_klite.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_klite.Location = new System.Drawing.Point(307, 79);
+            this.cb_klite.Location = new System.Drawing.Point(307, 91);
             this.cb_klite.Name = "cb_klite";
             this.cb_klite.Size = new System.Drawing.Size(112, 17);
             this.cb_klite.TabIndex = 15;
@@ -236,7 +238,7 @@
             this.cb_winrar.AutoSize = true;
             this.cb_winrar.Checked = true;
             this.cb_winrar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_winrar.Location = new System.Drawing.Point(307, 56);
+            this.cb_winrar.Location = new System.Drawing.Point(307, 68);
             this.cb_winrar.Name = "cb_winrar";
             this.cb_winrar.Size = new System.Drawing.Size(68, 17);
             this.cb_winrar.TabIndex = 14;
@@ -248,7 +250,7 @@
             this.cb_thunderbird.AutoSize = true;
             this.cb_thunderbird.Checked = true;
             this.cb_thunderbird.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_thunderbird.Location = new System.Drawing.Point(173, 172);
+            this.cb_thunderbird.Location = new System.Drawing.Point(173, 184);
             this.cb_thunderbird.Name = "cb_thunderbird";
             this.cb_thunderbird.Size = new System.Drawing.Size(83, 17);
             this.cb_thunderbird.TabIndex = 13;
@@ -260,7 +262,7 @@
             this.cb_spark.AutoSize = true;
             this.cb_spark.Checked = true;
             this.cb_spark.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_spark.Location = new System.Drawing.Point(173, 149);
+            this.cb_spark.Location = new System.Drawing.Point(173, 161);
             this.cb_spark.Name = "cb_spark";
             this.cb_spark.Size = new System.Drawing.Size(54, 17);
             this.cb_spark.TabIndex = 12;
@@ -272,7 +274,7 @@
             this.cb_libreoffice.AutoSize = true;
             this.cb_libreoffice.Checked = true;
             this.cb_libreoffice.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_libreoffice.Location = new System.Drawing.Point(42, 172);
+            this.cb_libreoffice.Location = new System.Drawing.Point(42, 184);
             this.cb_libreoffice.Name = "cb_libreoffice";
             this.cb_libreoffice.Size = new System.Drawing.Size(77, 17);
             this.cb_libreoffice.TabIndex = 11;
@@ -284,7 +286,7 @@
             this.cb_fusioninventory.AutoSize = true;
             this.cb_fusioninventory.Checked = true;
             this.cb_fusioninventory.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_fusioninventory.Location = new System.Drawing.Point(173, 126);
+            this.cb_fusioninventory.Location = new System.Drawing.Point(173, 138);
             this.cb_fusioninventory.Name = "cb_fusioninventory";
             this.cb_fusioninventory.Size = new System.Drawing.Size(104, 17);
             this.cb_fusioninventory.TabIndex = 10;
@@ -296,7 +298,7 @@
             this.cb_cutepdf.AutoSize = true;
             this.cb_cutepdf.Checked = true;
             this.cb_cutepdf.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_cutepdf.Location = new System.Drawing.Point(173, 103);
+            this.cb_cutepdf.Location = new System.Drawing.Point(173, 115);
             this.cb_cutepdf.Name = "cb_cutepdf";
             this.cb_cutepdf.Size = new System.Drawing.Size(69, 17);
             this.cb_cutepdf.TabIndex = 9;
@@ -308,7 +310,7 @@
             this.cb_chrome.AutoSize = true;
             this.cb_chrome.Checked = true;
             this.cb_chrome.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_chrome.Location = new System.Drawing.Point(173, 79);
+            this.cb_chrome.Location = new System.Drawing.Point(173, 91);
             this.cb_chrome.Name = "cb_chrome";
             this.cb_chrome.Size = new System.Drawing.Size(99, 17);
             this.cb_chrome.TabIndex = 8;
@@ -320,7 +322,7 @@
             this.cb_anydesk.AutoSize = true;
             this.cb_anydesk.Checked = true;
             this.cb_anydesk.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_anydesk.Location = new System.Drawing.Point(42, 149);
+            this.cb_anydesk.Location = new System.Drawing.Point(42, 161);
             this.cb_anydesk.Name = "cb_anydesk";
             this.cb_anydesk.Size = new System.Drawing.Size(69, 17);
             this.cb_anydesk.TabIndex = 4;
@@ -332,7 +334,7 @@
             this.cb_ammyy.AutoSize = true;
             this.cb_ammyy.Checked = true;
             this.cb_ammyy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ammyy.Location = new System.Drawing.Point(42, 126);
+            this.cb_ammyy.Location = new System.Drawing.Point(42, 138);
             this.cb_ammyy.Name = "cb_ammyy";
             this.cb_ammyy.Size = new System.Drawing.Size(59, 17);
             this.cb_ammyy.TabIndex = 3;
@@ -344,7 +346,7 @@
             this.cb_teamviewer.AutoSize = true;
             this.cb_teamviewer.Checked = true;
             this.cb_teamviewer.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_teamviewer.Location = new System.Drawing.Point(42, 102);
+            this.cb_teamviewer.Location = new System.Drawing.Point(42, 114);
             this.cb_teamviewer.Name = "cb_teamviewer";
             this.cb_teamviewer.Size = new System.Drawing.Size(85, 17);
             this.cb_teamviewer.TabIndex = 2;
@@ -356,7 +358,7 @@
             this.cb_ultravnc.AutoSize = true;
             this.cb_ultravnc.Checked = true;
             this.cb_ultravnc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ultravnc.Location = new System.Drawing.Point(42, 79);
+            this.cb_ultravnc.Location = new System.Drawing.Point(42, 91);
             this.cb_ultravnc.Name = "cb_ultravnc";
             this.cb_ultravnc.Size = new System.Drawing.Size(70, 17);
             this.cb_ultravnc.TabIndex = 1;
@@ -368,7 +370,7 @@
             this.cb_radmin.AutoSize = true;
             this.cb_radmin.Checked = true;
             this.cb_radmin.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_radmin.Location = new System.Drawing.Point(42, 56);
+            this.cb_radmin.Location = new System.Drawing.Point(42, 68);
             this.cb_radmin.Name = "cb_radmin";
             this.cb_radmin.Size = new System.Drawing.Size(62, 17);
             this.cb_radmin.TabIndex = 0;
@@ -409,7 +411,7 @@
             this.statusBarPanel1.Alignment = System.Windows.Forms.HorizontalAlignment.Right;
             this.statusBarPanel1.Name = "statusBarPanel1";
             this.statusBarPanel1.Text = "statusBarPanel1";
-            this.statusBarPanel1.Width = 410;
+            this.statusBarPanel1.Width = 437;
             // 
             // time
             // 

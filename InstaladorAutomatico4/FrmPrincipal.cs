@@ -91,6 +91,7 @@ namespace InstaladorAutomatico4
         {
 
 
+
             if (cb_update.Checked)
             {
                 MessageBox.Show("Desenvolver...");
@@ -351,12 +352,12 @@ namespace InstaladorAutomatico4
             }
 
 
-           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -424,6 +425,7 @@ namespace InstaladorAutomatico4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
         }
 
 
@@ -497,5 +499,3 @@ namespace InstaladorAutomatico4
         }
     }
 }
-//ok 09022021
-//ok
