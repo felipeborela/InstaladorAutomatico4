@@ -3,6 +3,8 @@ using System.Drawing;
 using System.IO;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
+using System.IO.Compression;
+using System.IO.Compression.FileSystem;
 
 
 namespace InstaladorAutomatico4
@@ -77,6 +79,7 @@ namespace InstaladorAutomatico4
         string avastInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Avast\InstalarAvast.bat";
         string avastDestPath = @"C:\TI\Avast\";
         string avastInstaller_DestPath = @"C:\TI\Avast\InstalarAvast.bat";
+        string avastInstaller_path = @"C:\\TI\\Avast\\avast_free_antivirus_setup_online.exe";
 
         string netagentInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\NetAgent\InstalarNetAgent.bat";
         string netagentDestPath = @"C:\TI\NetAgent\";
@@ -86,6 +89,14 @@ namespace InstaladorAutomatico4
         string officeDestPath = @"C:\TI\Office\";
         string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
 
+        string oracle11G = @"\\192.168.0.13\InstaladorAutomatico\Globus\Oracle11G_R2.zip";
+        string oraclePath = @"C:\TI\Globus\Oracle11G_R2.zip";
+
+        string ambGlobus = @"\\192.168.0.13\InstaladorAutomatico\Globus\AmbienteGlobus64.exe";
+        string ambGlobusPath = @"C:\TI\Globus\AmbienteGlobus64.exe";
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -94,22 +105,24 @@ namespace InstaladorAutomatico4
 
             if (cb_update.Checked)
             {
-                if (cb_radmin.Checked)
+                if (cb_avast.Checked)
                 {
-                    if (File.Exists(radminInstaller_DestPath))
+                /*    
+                InstalarAvast:
+                    if (File.Exists(avastInstaller_path))
                     {
                         System.Net.WebClient client = new System.Net.WebClient();
-                        client.DownloadFile("http:", @"C:\\TI\\LibreOffice\\libreoffice.exe");
-                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                        client.DownloadFile("http://www.vparaty.com.br/instalador/avast/avast_free_antivirus_setup_online.exe", avastInstaller_path);
+                        client.DownloadFile("http://www.vparaty.com.br/instalador/avast/InstalarAvastOnline.bat", @"C:\\TI\\Avast\\InstalarAvastOnline.bat");
+                        System.Diagnostics.Process.Start(@"C:\\TI\\Avast\\InstalarAvastOnline.bat");
                     }
                     else
                     {
-                        Directory.CreateDirectory(radminDestPath);
-                        System.IO.File.Copy(radminInstaller_SourcePath, radminInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
-                    }
+                        Directory.CreateDirectory(avastDestPath);
+                        goto InstalarAvast;
+                    }*/
                 }
-                MessageBox.Show("Desenvolver...");
+                //MessageBox.Show("Desenvolver...");
             }
             else
             {
@@ -312,16 +325,21 @@ namespace InstaladorAutomatico4
 
                 if (cb_globus.Checked)
                 {
-                    if (File.Exists(globusInstaller_DestPath))
+                    InstalarGlobus:
+                    if (File.Exists(@"C:\TI\Globus\Oracle11G_R2.zip"))
                     {
-                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
+                        
+
                     }
                     else
                     {
-                        Directory.CreateDirectory(globusDestPath);
-                        System.IO.File.Copy(globusInstaller_SourcePath, globusInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
+                        Directory.CreateDirectory(@"C:\TI\Globus\");
+                        System.IO.File.Copy(oracle11G, oraclePath, true);
+                        System.IO.File.Copy(ambGlobus, ambGlobusPath, true);
+                        ZipFile.ExtractToDirectory(zipPath, extractPath);
+
                     }
+                    goto InstalarGlobus;
                 }
 
                 if (cb_avast.Checked)
@@ -560,7 +578,7 @@ namespace InstaladorAutomatico4
                 pb_Spark.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\Thunderbird\\Thunderbird.exe")) || (File.Exists("C:\\Program Files (x86)\\Thunderbird\\Thunderbird.exe")))
+            if ((File.Exists("C:\\Program Files\\Mozilla Thunderbird\\Thunderbird.exe")) || (File.Exists("C:\\Program Files (x86)\\Mozilla Thunderbird\\Thunderbird.exe")))
             {
                 pb_Thunderbird.Image = Properties.Resources.check_ok;
             }
@@ -578,7 +596,7 @@ namespace InstaladorAutomatico4
                 pb_Winrar.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\KLite\\Klite.exe")) || (File.Exists("C:\\Program Files (x86)\\KLite\\Klite.exe")))
+            if ((File.Exists("C:\\Program Files (x86)\\K-Lite Codec Pack\\Tools\\mediainfo.exe")) || (File.Exists("C:\\Program Files\\K-Lite Codec Pack\\Tools\\mediainfo.exe")))
             {
                 pb_KLite.Image = Properties.Resources.check_ok;
             }
@@ -587,7 +605,7 @@ namespace InstaladorAutomatico4
                 pb_KLite.Image = Properties.Resources.check_error;
             }
 
-            if (((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\app\\product\\11.2.0\\client_1\\network\\admin\\tsnames.ora")) || ((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\oracle\\product\\11.2.0\\client_1\\network\\admin\\tsnames.ora")))))
+            if (((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\app\\product\\11.2.0\\client_1\\network\\admin\\tnsnames.ora")) || ((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\oracle\\product\\11.2.0\\client_1\\network\\admin\\tnsnames.ora")))))
             {
                 pb_Globus.Image = Properties.Resources.check_ok;
             }
@@ -605,7 +623,7 @@ namespace InstaladorAutomatico4
                 pb_NetAgent.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files (x86)\\Avast\\Avast.exe")) || (File.Exists("C:\\Program Files\\Avast\\Avast.exe")))
+            if ((File.Exists("C:\\Program Files\\Avast Software\\Avast\\AvastUI.exe")) || (File.Exists("C:\\Program Files (x86)\\Avast Software\\Avast\\AvastUI.exe")))
             {
                 pb_Avast.Image = Properties.Resources.check_ok;
             }
@@ -614,7 +632,7 @@ namespace InstaladorAutomatico4
                 pb_Avast.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\Microsoft Office\\root\\Office16\\word.exe")) || (File.Exists("C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\word.exe")))
+            if ((File.Exists("C:\\Program Files\\Microsoft Office\\root\\Office16\\winword.exe")) || (File.Exists("C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\winword.exe")))
             {
                 pb_Office.Image = Properties.Resources.check_ok;
             }

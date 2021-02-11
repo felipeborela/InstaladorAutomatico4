@@ -77,7 +77,6 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).BeginInit();
@@ -105,7 +104,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -655,16 +653,6 @@
             this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(441, 334);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -754,7 +742,6 @@
         private System.Windows.Forms.PictureBox pb_CutePDF;
         private System.Windows.Forms.PictureBox pb_Chrome;
         private System.Windows.Forms.PictureBox pb_CCleaner;
-        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
