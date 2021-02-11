@@ -31,6 +31,22 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pb_Office = new System.Windows.Forms.PictureBox();
+            this.pb_Avast = new System.Windows.Forms.PictureBox();
+            this.pb_NetAgent = new System.Windows.Forms.PictureBox();
+            this.pb_Globus = new System.Windows.Forms.PictureBox();
+            this.pb_KLite = new System.Windows.Forms.PictureBox();
+            this.pb_Winrar = new System.Windows.Forms.PictureBox();
+            this.pb_Thunderbird = new System.Windows.Forms.PictureBox();
+            this.pb_Spark = new System.Windows.Forms.PictureBox();
+            this.pb_FusionInventory = new System.Windows.Forms.PictureBox();
+            this.pb_CutePDF = new System.Windows.Forms.PictureBox();
+            this.pb_Chrome = new System.Windows.Forms.PictureBox();
+            this.pb_CCleaner = new System.Windows.Forms.PictureBox();
+            this.pb_LibreOffice = new System.Windows.Forms.PictureBox();
+            this.pb_AnyDesk = new System.Windows.Forms.PictureBox();
+            this.pb_Ammyy = new System.Windows.Forms.PictureBox();
+            this.pb_TeamViewer = new System.Windows.Forms.PictureBox();
             this.pb_UltraVNC = new System.Windows.Forms.PictureBox();
             this.pb_Radmin = new System.Windows.Forms.PictureBox();
             this.cb_update = new System.Windows.Forms.CheckBox();
@@ -61,49 +77,35 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
-            this.pb_TeamViewer = new System.Windows.Forms.PictureBox();
-            this.pb_Ammyy = new System.Windows.Forms.PictureBox();
-            this.pb_AnyDesk = new System.Windows.Forms.PictureBox();
-            this.pb_LibreOffice = new System.Windows.Forms.PictureBox();
-            this.pb_CCleaner = new System.Windows.Forms.PictureBox();
-            this.pb_Chrome = new System.Windows.Forms.PictureBox();
-            this.pb_CutePDF = new System.Windows.Forms.PictureBox();
-            this.pb_FusionInventory = new System.Windows.Forms.PictureBox();
-            this.pb_Spark = new System.Windows.Forms.PictureBox();
-            this.pb_Thunderbird = new System.Windows.Forms.PictureBox();
-            this.pb_Winrar = new System.Windows.Forms.PictureBox();
-            this.pb_KLite = new System.Windows.Forms.PictureBox();
-            this.pb_Globus = new System.Windows.Forms.PictureBox();
-            this.pb_NetAgent = new System.Windows.Forms.PictureBox();
-            this.pb_Avast = new System.Windows.Forms.PictureBox();
-            this.pb_Office = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_NetAgent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Globus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_KLite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Thunderbird)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Spark)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CutePDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CCleaner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_LibreOffice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_AnyDesk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Ammyy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TeamViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TeamViewer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Ammyy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_AnyDesk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_LibreOffice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CCleaner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CutePDF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Spark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Thunderbird)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_KLite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Globus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NetAgent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Avast)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -161,6 +163,166 @@
             this.tabPage1.Size = new System.Drawing.Size(441, 334);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
+            // 
+            // pb_Office
+            // 
+            this.pb_Office.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Office.Location = new System.Drawing.Point(281, 181);
+            this.pb_Office.Name = "pb_Office";
+            this.pb_Office.Size = new System.Drawing.Size(20, 20);
+            this.pb_Office.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Office.TabIndex = 49;
+            this.pb_Office.TabStop = false;
+            // 
+            // pb_Avast
+            // 
+            this.pb_Avast.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Avast.Location = new System.Drawing.Point(281, 158);
+            this.pb_Avast.Name = "pb_Avast";
+            this.pb_Avast.Size = new System.Drawing.Size(20, 20);
+            this.pb_Avast.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Avast.TabIndex = 48;
+            this.pb_Avast.TabStop = false;
+            // 
+            // pb_NetAgent
+            // 
+            this.pb_NetAgent.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_NetAgent.Location = new System.Drawing.Point(281, 135);
+            this.pb_NetAgent.Name = "pb_NetAgent";
+            this.pb_NetAgent.Size = new System.Drawing.Size(20, 20);
+            this.pb_NetAgent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_NetAgent.TabIndex = 47;
+            this.pb_NetAgent.TabStop = false;
+            // 
+            // pb_Globus
+            // 
+            this.pb_Globus.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Globus.Location = new System.Drawing.Point(281, 112);
+            this.pb_Globus.Name = "pb_Globus";
+            this.pb_Globus.Size = new System.Drawing.Size(20, 20);
+            this.pb_Globus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Globus.TabIndex = 46;
+            this.pb_Globus.TabStop = false;
+            // 
+            // pb_KLite
+            // 
+            this.pb_KLite.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_KLite.Location = new System.Drawing.Point(281, 88);
+            this.pb_KLite.Name = "pb_KLite";
+            this.pb_KLite.Size = new System.Drawing.Size(20, 20);
+            this.pb_KLite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_KLite.TabIndex = 45;
+            this.pb_KLite.TabStop = false;
+            // 
+            // pb_Winrar
+            // 
+            this.pb_Winrar.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Winrar.Location = new System.Drawing.Point(281, 65);
+            this.pb_Winrar.Name = "pb_Winrar";
+            this.pb_Winrar.Size = new System.Drawing.Size(20, 20);
+            this.pb_Winrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Winrar.TabIndex = 44;
+            this.pb_Winrar.TabStop = false;
+            // 
+            // pb_Thunderbird
+            // 
+            this.pb_Thunderbird.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Thunderbird.Location = new System.Drawing.Point(144, 181);
+            this.pb_Thunderbird.Name = "pb_Thunderbird";
+            this.pb_Thunderbird.Size = new System.Drawing.Size(20, 20);
+            this.pb_Thunderbird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Thunderbird.TabIndex = 43;
+            this.pb_Thunderbird.TabStop = false;
+            // 
+            // pb_Spark
+            // 
+            this.pb_Spark.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Spark.Location = new System.Drawing.Point(144, 158);
+            this.pb_Spark.Name = "pb_Spark";
+            this.pb_Spark.Size = new System.Drawing.Size(20, 20);
+            this.pb_Spark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Spark.TabIndex = 42;
+            this.pb_Spark.TabStop = false;
+            // 
+            // pb_FusionInventory
+            // 
+            this.pb_FusionInventory.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_FusionInventory.Location = new System.Drawing.Point(144, 135);
+            this.pb_FusionInventory.Name = "pb_FusionInventory";
+            this.pb_FusionInventory.Size = new System.Drawing.Size(20, 20);
+            this.pb_FusionInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_FusionInventory.TabIndex = 41;
+            this.pb_FusionInventory.TabStop = false;
+            // 
+            // pb_CutePDF
+            // 
+            this.pb_CutePDF.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_CutePDF.Location = new System.Drawing.Point(144, 112);
+            this.pb_CutePDF.Name = "pb_CutePDF";
+            this.pb_CutePDF.Size = new System.Drawing.Size(20, 20);
+            this.pb_CutePDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_CutePDF.TabIndex = 40;
+            this.pb_CutePDF.TabStop = false;
+            // 
+            // pb_Chrome
+            // 
+            this.pb_Chrome.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Chrome.Location = new System.Drawing.Point(144, 88);
+            this.pb_Chrome.Name = "pb_Chrome";
+            this.pb_Chrome.Size = new System.Drawing.Size(20, 20);
+            this.pb_Chrome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Chrome.TabIndex = 39;
+            this.pb_Chrome.TabStop = false;
+            // 
+            // pb_CCleaner
+            // 
+            this.pb_CCleaner.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_CCleaner.Location = new System.Drawing.Point(144, 65);
+            this.pb_CCleaner.Name = "pb_CCleaner";
+            this.pb_CCleaner.Size = new System.Drawing.Size(20, 20);
+            this.pb_CCleaner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_CCleaner.TabIndex = 38;
+            this.pb_CCleaner.TabStop = false;
+            // 
+            // pb_LibreOffice
+            // 
+            this.pb_LibreOffice.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_LibreOffice.Location = new System.Drawing.Point(16, 181);
+            this.pb_LibreOffice.Name = "pb_LibreOffice";
+            this.pb_LibreOffice.Size = new System.Drawing.Size(20, 20);
+            this.pb_LibreOffice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_LibreOffice.TabIndex = 37;
+            this.pb_LibreOffice.TabStop = false;
+            // 
+            // pb_AnyDesk
+            // 
+            this.pb_AnyDesk.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_AnyDesk.Location = new System.Drawing.Point(16, 158);
+            this.pb_AnyDesk.Name = "pb_AnyDesk";
+            this.pb_AnyDesk.Size = new System.Drawing.Size(20, 20);
+            this.pb_AnyDesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_AnyDesk.TabIndex = 36;
+            this.pb_AnyDesk.TabStop = false;
+            // 
+            // pb_Ammyy
+            // 
+            this.pb_Ammyy.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_Ammyy.Location = new System.Drawing.Point(16, 135);
+            this.pb_Ammyy.Name = "pb_Ammyy";
+            this.pb_Ammyy.Size = new System.Drawing.Size(20, 20);
+            this.pb_Ammyy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Ammyy.TabIndex = 35;
+            this.pb_Ammyy.TabStop = false;
+            // 
+            // pb_TeamViewer
+            // 
+            this.pb_TeamViewer.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_TeamViewer.Location = new System.Drawing.Point(16, 112);
+            this.pb_TeamViewer.Name = "pb_TeamViewer";
+            this.pb_TeamViewer.Size = new System.Drawing.Size(20, 20);
+            this.pb_TeamViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_TeamViewer.TabIndex = 34;
+            this.pb_TeamViewer.TabStop = false;
             // 
             // pb_UltraVNC
             // 
@@ -493,165 +655,15 @@
             this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // pb_TeamViewer
+            // tabPage3
             // 
-            this.pb_TeamViewer.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_TeamViewer.Location = new System.Drawing.Point(16, 112);
-            this.pb_TeamViewer.Name = "pb_TeamViewer";
-            this.pb_TeamViewer.Size = new System.Drawing.Size(20, 20);
-            this.pb_TeamViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_TeamViewer.TabIndex = 34;
-            this.pb_TeamViewer.TabStop = false;
-            // 
-            // pb_Ammyy
-            // 
-            this.pb_Ammyy.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Ammyy.Location = new System.Drawing.Point(16, 135);
-            this.pb_Ammyy.Name = "pb_Ammyy";
-            this.pb_Ammyy.Size = new System.Drawing.Size(20, 20);
-            this.pb_Ammyy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Ammyy.TabIndex = 35;
-            this.pb_Ammyy.TabStop = false;
-            // 
-            // pb_AnyDesk
-            // 
-            this.pb_AnyDesk.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_AnyDesk.Location = new System.Drawing.Point(16, 158);
-            this.pb_AnyDesk.Name = "pb_AnyDesk";
-            this.pb_AnyDesk.Size = new System.Drawing.Size(20, 20);
-            this.pb_AnyDesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_AnyDesk.TabIndex = 36;
-            this.pb_AnyDesk.TabStop = false;
-            // 
-            // pb_LibreOffice
-            // 
-            this.pb_LibreOffice.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_LibreOffice.Location = new System.Drawing.Point(16, 181);
-            this.pb_LibreOffice.Name = "pb_LibreOffice";
-            this.pb_LibreOffice.Size = new System.Drawing.Size(20, 20);
-            this.pb_LibreOffice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_LibreOffice.TabIndex = 37;
-            this.pb_LibreOffice.TabStop = false;
-            // 
-            // pb_CCleaner
-            // 
-            this.pb_CCleaner.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_CCleaner.Location = new System.Drawing.Point(144, 65);
-            this.pb_CCleaner.Name = "pb_CCleaner";
-            this.pb_CCleaner.Size = new System.Drawing.Size(20, 20);
-            this.pb_CCleaner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_CCleaner.TabIndex = 38;
-            this.pb_CCleaner.TabStop = false;
-            // 
-            // pb_Chrome
-            // 
-            this.pb_Chrome.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Chrome.Location = new System.Drawing.Point(144, 88);
-            this.pb_Chrome.Name = "pb_Chrome";
-            this.pb_Chrome.Size = new System.Drawing.Size(20, 20);
-            this.pb_Chrome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Chrome.TabIndex = 39;
-            this.pb_Chrome.TabStop = false;
-            // 
-            // pb_CutePDF
-            // 
-            this.pb_CutePDF.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_CutePDF.Location = new System.Drawing.Point(144, 112);
-            this.pb_CutePDF.Name = "pb_CutePDF";
-            this.pb_CutePDF.Size = new System.Drawing.Size(20, 20);
-            this.pb_CutePDF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_CutePDF.TabIndex = 40;
-            this.pb_CutePDF.TabStop = false;
-            // 
-            // pb_FusionInventory
-            // 
-            this.pb_FusionInventory.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_FusionInventory.Location = new System.Drawing.Point(144, 135);
-            this.pb_FusionInventory.Name = "pb_FusionInventory";
-            this.pb_FusionInventory.Size = new System.Drawing.Size(20, 20);
-            this.pb_FusionInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_FusionInventory.TabIndex = 41;
-            this.pb_FusionInventory.TabStop = false;
-            // 
-            // pb_Spark
-            // 
-            this.pb_Spark.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Spark.Location = new System.Drawing.Point(144, 158);
-            this.pb_Spark.Name = "pb_Spark";
-            this.pb_Spark.Size = new System.Drawing.Size(20, 20);
-            this.pb_Spark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Spark.TabIndex = 42;
-            this.pb_Spark.TabStop = false;
-            // 
-            // pb_Thunderbird
-            // 
-            this.pb_Thunderbird.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Thunderbird.Location = new System.Drawing.Point(144, 181);
-            this.pb_Thunderbird.Name = "pb_Thunderbird";
-            this.pb_Thunderbird.Size = new System.Drawing.Size(20, 20);
-            this.pb_Thunderbird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Thunderbird.TabIndex = 43;
-            this.pb_Thunderbird.TabStop = false;
-            // 
-            // pb_Winrar
-            // 
-            this.pb_Winrar.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Winrar.Location = new System.Drawing.Point(281, 65);
-            this.pb_Winrar.Name = "pb_Winrar";
-            this.pb_Winrar.Size = new System.Drawing.Size(20, 20);
-            this.pb_Winrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Winrar.TabIndex = 44;
-            this.pb_Winrar.TabStop = false;
-            // 
-            // pb_KLite
-            // 
-            this.pb_KLite.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_KLite.Location = new System.Drawing.Point(281, 88);
-            this.pb_KLite.Name = "pb_KLite";
-            this.pb_KLite.Size = new System.Drawing.Size(20, 20);
-            this.pb_KLite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_KLite.TabIndex = 45;
-            this.pb_KLite.TabStop = false;
-            // 
-            // pb_Globus
-            // 
-            this.pb_Globus.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Globus.Location = new System.Drawing.Point(281, 112);
-            this.pb_Globus.Name = "pb_Globus";
-            this.pb_Globus.Size = new System.Drawing.Size(20, 20);
-            this.pb_Globus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Globus.TabIndex = 46;
-            this.pb_Globus.TabStop = false;
-            // 
-            // pb_NetAgent
-            // 
-            this.pb_NetAgent.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_NetAgent.Location = new System.Drawing.Point(281, 135);
-            this.pb_NetAgent.Name = "pb_NetAgent";
-            this.pb_NetAgent.Size = new System.Drawing.Size(20, 20);
-            this.pb_NetAgent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_NetAgent.TabIndex = 47;
-            this.pb_NetAgent.TabStop = false;
-            // 
-            // pb_Avast
-            // 
-            this.pb_Avast.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Avast.Location = new System.Drawing.Point(281, 158);
-            this.pb_Avast.Name = "pb_Avast";
-            this.pb_Avast.Size = new System.Drawing.Size(20, 20);
-            this.pb_Avast.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Avast.TabIndex = 48;
-            this.pb_Avast.TabStop = false;
-            // 
-            // pb_Office
-            // 
-            this.pb_Office.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Office.Location = new System.Drawing.Point(281, 181);
-            this.pb_Office.Name = "pb_Office";
-            this.pb_Office.Size = new System.Drawing.Size(20, 20);
-            this.pb_Office.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Office.TabIndex = 49;
-            this.pb_Office.TabStop = false;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(441, 334);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
@@ -669,25 +681,25 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_NetAgent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Globus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_KLite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Thunderbird)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Spark)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CutePDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_CCleaner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_LibreOffice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_AnyDesk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Ammyy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_TeamViewer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_TeamViewer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Ammyy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_AnyDesk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_LibreOffice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CCleaner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_CutePDF)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Spark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Thunderbird)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_KLite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Globus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_NetAgent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Avast)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -742,6 +754,7 @@
         private System.Windows.Forms.PictureBox pb_CutePDF;
         private System.Windows.Forms.PictureBox pb_Chrome;
         private System.Windows.Forms.PictureBox pb_CCleaner;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 

@@ -94,6 +94,21 @@ namespace InstaladorAutomatico4
 
             if (cb_update.Checked)
             {
+                if (cb_radmin.Checked)
+                {
+                    if (File.Exists(radminInstaller_DestPath))
+                    {
+                        System.Net.WebClient client = new System.Net.WebClient();
+                        client.DownloadFile("http:", @"C:\\TI\\LibreOffice\\libreoffice.exe");
+                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(radminDestPath);
+                        System.IO.File.Copy(radminInstaller_SourcePath, radminInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(radminInstaller_DestPath);
+                    }
+                }
                 MessageBox.Show("Desenvolver...");
             }
             else
@@ -536,6 +551,77 @@ namespace InstaladorAutomatico4
                 pb_FusionInventory.Image = Properties.Resources.check_error;
             }
 
+            if ((File.Exists("C:\\Program Files\\Spark\\Spark.exe")) || (File.Exists("C:\\Program Files (x86)\\Spark\\Spark.exe")))
+            {
+                pb_Spark.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Spark.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\Thunderbird\\Thunderbird.exe")) || (File.Exists("C:\\Program Files (x86)\\Thunderbird\\Thunderbird.exe")))
+            {
+                pb_Thunderbird.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Thunderbird.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\Winrar\\Winrar.exe")) || (File.Exists("C:\\Program Files (x86)\\Winrar\\Winrar.exe")))
+            {
+                pb_Winrar.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Winrar.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\KLite\\Klite.exe")) || (File.Exists("C:\\Program Files (x86)\\KLite\\Klite.exe")))
+            {
+                pb_KLite.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_KLite.Image = Properties.Resources.check_error;
+            }
+
+            if (((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\app\\product\\11.2.0\\client_1\\network\\admin\\tsnames.ora")) || ((File.Exists("C:\\ambglobus\\BDEADMIN.EXE")) && (File.Exists("C:\\oracle\\product\\11.2.0\\client_1\\network\\admin\\tsnames.ora")))))
+            {
+                pb_Globus.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Globus.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files (x86)\\Kaspersky Lab\\NetworkAgent\\klnagent.exe")) || (File.Exists("C:\\Program Files\\Kaspersky Lab\\NetworkAgent\\klnagent.exe")))
+            {
+                pb_NetAgent.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_NetAgent.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files (x86)\\Avast\\Avast.exe")) || (File.Exists("C:\\Program Files\\Avast\\Avast.exe")))
+            {
+                pb_Avast.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Avast.Image = Properties.Resources.check_error;
+            }
+
+            if ((File.Exists("C:\\Program Files\\Microsoft Office\\root\\Office16\\word.exe")) || (File.Exists("C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\word.exe")))
+            {
+                pb_Office.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_Office.Image = Properties.Resources.check_error;
+            }
         }
 
 
@@ -552,18 +638,20 @@ namespace InstaladorAutomatico4
                 {
                     label_online.Text = "Servidor local encontrado";
                     label_online.ForeColor = Color.Blue;
+                    cb_update.Checked = false;
 
                 }
                 else
                 {
                     label_online.Text = "Online";
                     label_online.ForeColor = Color.Green;
+                    cb_update.Checked = true;
                 }
             }
 
             catch
             {
-                label_online.Text = "Trabalhando em modo offline";
+                label_online.Text = "Nenhum servidor encontrado";
                 label_online.ForeColor = Color.Red;
             }
 
@@ -590,3 +678,4 @@ namespace InstaladorAutomatico4
         }
     }
 }
+//ok
