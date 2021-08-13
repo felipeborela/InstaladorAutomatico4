@@ -4,7 +4,6 @@ using System.IO;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using System.IO.Compression;
-using System.IO.Compression.FileSystem;
 
 
 namespace InstaladorAutomatico4
@@ -84,17 +83,14 @@ namespace InstaladorAutomatico4
         string netagentInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\NetAgent\InstalarNetAgent.bat";
         string netagentDestPath = @"C:\TI\NetAgent\";
         string netagentInstaller_DestPath = @"C:\TI\NetAgent\InstalarNetAgent.bat";
+        
+        string aspiahostInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\AspiaHost\InstalarAspiaHost.bat";
+        string aspiahostDestPath = @"C:\TI\AspiaHost\";
+        string aspiahostInstaller_DestPath = @"C:\TI\AspiaHost\InstalarAspiaHost.bat";
 
         string officeInstaller_SourcePath = @"\\192.168.0.13\InstaladorAutomatico\Office\InstalarOffice.bat";
         string officeDestPath = @"C:\TI\Office\";
         string officeInstaller_DestPath = @"C:\TI\Office\InstalarOffice.bat";
-
-        string oracle11G = @"\\192.168.0.13\InstaladorAutomatico\Globus\Oracle11G_R2.zip";
-        string oraclePath = @"C:\TI\Globus\Oracle11G_R2.zip";
-
-        string ambGlobus = @"\\192.168.0.13\InstaladorAutomatico\Globus\AmbienteGlobus64.exe";
-        string ambGlobusPath = @"C:\TI\Globus\AmbienteGlobus64.exe";
-
 
 
 
@@ -325,21 +321,16 @@ namespace InstaladorAutomatico4
 
                 if (cb_globus.Checked)
                 {
-                    InstalarGlobus:
-                    if (File.Exists(@"C:\TI\Globus\Oracle11G_R2.zip"))
+                    if (File.Exists(globusInstaller_DestPath))
                     {
-                        
-
+                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
                     }
                     else
                     {
-                        Directory.CreateDirectory(@"C:\TI\Globus\");
-                        System.IO.File.Copy(oracle11G, oraclePath, true);
-                        System.IO.File.Copy(ambGlobus, ambGlobusPath, true);
-                        ZipFile.ExtractToDirectory(zipPath, extractPath);
-
+                        Directory.CreateDirectory(globusDestPath);
+                        System.IO.File.Copy(globusInstaller_SourcePath, globusInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(globusInstaller_DestPath);
                     }
-                    goto InstalarGlobus;
                 }
 
                 if (cb_avast.Checked)
@@ -369,6 +360,21 @@ namespace InstaladorAutomatico4
                         System.Diagnostics.Process.Start(netagentInstaller_DestPath);
                     }
                 }
+
+                if (cb_aspiahost.Checked)
+                {
+                    if (File.Exists(aspiahostInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(aspiahostDestPath);
+                        System.IO.File.Copy(aspiahostInstaller_SourcePath, aspiahostInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
+                    }
+                }
+
                 if (cb_office.Checked)
                 {
                     if (File.Exists(officeInstaller_DestPath))
@@ -411,6 +417,7 @@ namespace InstaladorAutomatico4
             cb_klite.Checked = true;
             cb_globus.Checked = true;
             cb_netgent.Checked = true;
+            cb_aspiahost.Checked = true;
 
         }
 
@@ -433,6 +440,7 @@ namespace InstaladorAutomatico4
             cb_globus.Checked = false;
             cb_netgent.Checked = false;
             cb_avast.Checked = false;
+            cb_aspiahost.Checked = false;
 
         }
 
@@ -472,7 +480,7 @@ namespace InstaladorAutomatico4
 
         private void statusBar1_PanelClick(object sender, StatusBarPanelClickEventArgs e)
         {
-            MessageBox.Show("Clique");
+            //MessageBox.Show("Clique");
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -506,7 +514,7 @@ namespace InstaladorAutomatico4
                 pb_TeamViewer.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\TI\\Ammyy\\Ammyy_v3.5.exe")) || (File.Exists("C:\\TI\\Ammyy\\Ammyy.exe")))
+            if ((File.Exists("C:\\TI\\Ammyy\\AA_v3.exe")) || (File.Exists("C:\\TI\\Ammyy\\Ammyy.exe")))
             {
                 pb_Ammyy.Image = Properties.Resources.check_ok;
             }
@@ -640,6 +648,16 @@ namespace InstaladorAutomatico4
             {
                 pb_Office.Image = Properties.Resources.check_error;
             }
+
+            if ((File.Exists("C:\\Program Files (x86)\\Aspia\\Host\\aspia_host_config.exe") || (File.Exists("C:\\Program Files\\Aspia\\Host\\aspia_host_config.exe"))))
+            {
+                pb_aspiahost.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_aspiahost.Image = Properties.Resources.check_error;
+            }
+
         }
 
 
@@ -691,6 +709,26 @@ namespace InstaladorAutomatico4
         }
 
         private void label_online_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_ammyy_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

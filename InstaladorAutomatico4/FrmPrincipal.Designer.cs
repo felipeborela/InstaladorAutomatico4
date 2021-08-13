@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cb_aspiahost = new System.Windows.Forms.CheckBox();
             this.pb_Office = new System.Windows.Forms.PictureBox();
             this.pb_Avast = new System.Windows.Forms.PictureBox();
             this.pb_NetAgent = new System.Windows.Forms.PictureBox();
@@ -77,6 +78,7 @@
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.time = new System.Windows.Forms.Timer(this.components);
             this.infOnline = new System.Windows.Forms.Timer(this.components);
+            this.pb_aspiahost = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Office)).BeginInit();
@@ -98,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aspiahost)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -107,13 +110,15 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(449, 360);
+            this.tabControl1.Size = new System.Drawing.Size(449, 383);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.pb_aspiahost);
+            this.tabPage1.Controls.Add(this.cb_aspiahost);
             this.tabPage1.Controls.Add(this.pb_Office);
             this.tabPage1.Controls.Add(this.pb_Avast);
             this.tabPage1.Controls.Add(this.pb_NetAgent);
@@ -158,9 +163,23 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(441, 334);
+            this.tabPage1.Size = new System.Drawing.Size(441, 357);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Softwares";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // cb_aspiahost
+            // 
+            this.cb_aspiahost.AutoSize = true;
+            this.cb_aspiahost.Checked = true;
+            this.cb_aspiahost.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_aspiahost.Location = new System.Drawing.Point(42, 207);
+            this.cb_aspiahost.Name = "cb_aspiahost";
+            this.cb_aspiahost.Size = new System.Drawing.Size(74, 17);
+            this.cb_aspiahost.TabIndex = 50;
+            this.cb_aspiahost.Text = "AspiaHost";
+            this.cb_aspiahost.UseVisualStyleBackColor = true;
+            this.cb_aspiahost.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_2);
             // 
             // pb_Office
             // 
@@ -345,7 +364,7 @@
             // cb_update
             // 
             this.cb_update.AutoSize = true;
-            this.cb_update.Location = new System.Drawing.Point(227, 239);
+            this.cb_update.Location = new System.Drawing.Point(227, 255);
             this.cb_update.Name = "cb_update";
             this.cb_update.Size = new System.Drawing.Size(180, 17);
             this.cb_update.TabIndex = 31;
@@ -424,7 +443,7 @@
             // 
             // bt_unmarkall
             // 
-            this.bt_unmarkall.Location = new System.Drawing.Point(22, 291);
+            this.bt_unmarkall.Location = new System.Drawing.Point(22, 307);
             this.bt_unmarkall.Name = "bt_unmarkall";
             this.bt_unmarkall.Size = new System.Drawing.Size(188, 23);
             this.bt_unmarkall.TabIndex = 20;
@@ -434,7 +453,7 @@
             // 
             // bt_markall
             // 
-            this.bt_markall.Location = new System.Drawing.Point(22, 262);
+            this.bt_markall.Location = new System.Drawing.Point(22, 278);
             this.bt_markall.Name = "bt_markall";
             this.bt_markall.Size = new System.Drawing.Size(188, 23);
             this.bt_markall.TabIndex = 19;
@@ -446,7 +465,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightGreen;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(216, 262);
+            this.button1.Location = new System.Drawing.Point(216, 278);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 52);
             this.button1.TabIndex = 16;
@@ -573,6 +592,7 @@
             this.cb_ammyy.TabIndex = 3;
             this.cb_ammyy.Text = "Ammyy";
             this.cb_ammyy.UseVisualStyleBackColor = true;
+            this.cb_ammyy.CheckedChanged += new System.EventHandler(this.cb_ammyy_CheckedChanged);
             // 
             // cb_teamviewer
             // 
@@ -616,14 +636,14 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(441, 334);
+            this.tabPage2.Size = new System.Drawing.Size(441, 357);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registros";
             // 
             // statusBar1
             // 
             this.statusBar1.Dock = System.Windows.Forms.DockStyle.None;
-            this.statusBar1.Location = new System.Drawing.Point(8, 366);
+            this.statusBar1.Location = new System.Drawing.Point(8, 389);
             this.statusBar1.Name = "statusBar1";
             this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanel1});
@@ -653,12 +673,22 @@
             this.infOnline.Interval = 5000;
             this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // pb_aspiahost
+            // 
+            this.pb_aspiahost.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_aspiahost.Location = new System.Drawing.Point(16, 204);
+            this.pb_aspiahost.Name = "pb_aspiahost";
+            this.pb_aspiahost.Size = new System.Drawing.Size(20, 20);
+            this.pb_aspiahost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_aspiahost.TabIndex = 51;
+            this.pb_aspiahost.TabStop = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(450, 391);
+            this.ClientSize = new System.Drawing.Size(450, 409);
             this.Controls.Add(this.statusBar1);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
@@ -688,6 +718,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_UltraVNC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Radmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_aspiahost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -742,6 +773,8 @@
         private System.Windows.Forms.PictureBox pb_CutePDF;
         private System.Windows.Forms.PictureBox pb_Chrome;
         private System.Windows.Forms.PictureBox pb_CCleaner;
+        private System.Windows.Forms.CheckBox cb_aspiahost;
+        private System.Windows.Forms.PictureBox pb_aspiahost;
     }
 }
 
