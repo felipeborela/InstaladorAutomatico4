@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_usuario = new System.Windows.Forms.Button();
+            this.btn_sistema = new System.Windows.Forms.Button();
             this.pb_AltoDesempenho = new System.Windows.Forms.PictureBox();
             this.cb_altodesempenhoenergia = new System.Windows.Forms.CheckBox();
             this.btn_Copiar = new System.Windows.Forms.Button();
@@ -58,11 +60,9 @@
             this.pb_TeamViewer = new System.Windows.Forms.PictureBox();
             this.pb_UltraVNC = new System.Windows.Forms.PictureBox();
             this.pb_Capicom = new System.Windows.Forms.PictureBox();
-            this.cb_update = new System.Windows.Forms.CheckBox();
             this.cb_firewall_3050 = new System.Windows.Forms.CheckBox();
-            this.label_online = new System.Windows.Forms.Label();
             this.cb_nfe = new System.Windows.Forms.CheckBox();
-            this.cb_netgent = new System.Windows.Forms.CheckBox();
+            this.cb_uac = new System.Windows.Forms.CheckBox();
             this.cb_alphasis = new System.Windows.Forms.CheckBox();
             this.cb_java = new System.Windows.Forms.CheckBox();
             this.bt_unmarkall = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             this.cb_winrar = new System.Windows.Forms.CheckBox();
             this.cb_tempdir = new System.Windows.Forms.CheckBox();
             this.cb_onedrive = new System.Windows.Forms.CheckBox();
-            this.cb_librefirewall_3050 = new System.Windows.Forms.CheckBox();
+            this.cb_bi = new System.Windows.Forms.CheckBox();
             this.cb_fusioninventory = new System.Windows.Forms.CheckBox();
             this.cb_lightshot = new System.Windows.Forms.CheckBox();
             this.cb_chrome = new System.Windows.Forms.CheckBox();
@@ -125,6 +125,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.btn_usuario);
+            this.tabPage1.Controls.Add(this.btn_sistema);
             this.tabPage1.Controls.Add(this.pb_AltoDesempenho);
             this.tabPage1.Controls.Add(this.cb_altodesempenhoenergia);
             this.tabPage1.Controls.Add(this.btn_Copiar);
@@ -152,11 +154,9 @@
             this.tabPage1.Controls.Add(this.pb_TeamViewer);
             this.tabPage1.Controls.Add(this.pb_UltraVNC);
             this.tabPage1.Controls.Add(this.pb_Capicom);
-            this.tabPage1.Controls.Add(this.cb_update);
             this.tabPage1.Controls.Add(this.cb_firewall_3050);
-            this.tabPage1.Controls.Add(this.label_online);
             this.tabPage1.Controls.Add(this.cb_nfe);
-            this.tabPage1.Controls.Add(this.cb_netgent);
+            this.tabPage1.Controls.Add(this.cb_uac);
             this.tabPage1.Controls.Add(this.cb_alphasis);
             this.tabPage1.Controls.Add(this.cb_java);
             this.tabPage1.Controls.Add(this.bt_unmarkall);
@@ -166,7 +166,7 @@
             this.tabPage1.Controls.Add(this.cb_winrar);
             this.tabPage1.Controls.Add(this.cb_tempdir);
             this.tabPage1.Controls.Add(this.cb_onedrive);
-            this.tabPage1.Controls.Add(this.cb_librefirewall_3050);
+            this.tabPage1.Controls.Add(this.cb_bi);
             this.tabPage1.Controls.Add(this.cb_fusioninventory);
             this.tabPage1.Controls.Add(this.cb_lightshot);
             this.tabPage1.Controls.Add(this.cb_chrome);
@@ -183,10 +183,30 @@
             this.tabPage1.Text = "Softwares";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btn_usuario
+            // 
+            this.btn_usuario.Location = new System.Drawing.Point(292, 316);
+            this.btn_usuario.Name = "btn_usuario";
+            this.btn_usuario.Size = new System.Drawing.Size(122, 23);
+            this.btn_usuario.TabIndex = 64;
+            this.btn_usuario.Text = "Padrão Usuário";
+            this.btn_usuario.UseVisualStyleBackColor = true;
+            this.btn_usuario.Click += new System.EventHandler(this.btn_usuario_Click);
+            // 
+            // btn_sistema
+            // 
+            this.btn_sistema.Location = new System.Drawing.Point(292, 287);
+            this.btn_sistema.Name = "btn_sistema";
+            this.btn_sistema.Size = new System.Drawing.Size(123, 23);
+            this.btn_sistema.TabIndex = 63;
+            this.btn_sistema.Text = "Padrão Sistema";
+            this.btn_sistema.UseVisualStyleBackColor = true;
+            this.btn_sistema.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // pb_AltoDesempenho
             // 
             this.pb_AltoDesempenho.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_AltoDesempenho.Location = new System.Drawing.Point(461, 157);
+            this.pb_AltoDesempenho.Location = new System.Drawing.Point(467, 145);
             this.pb_AltoDesempenho.Name = "pb_AltoDesempenho";
             this.pb_AltoDesempenho.Size = new System.Drawing.Size(20, 20);
             this.pb_AltoDesempenho.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,9 +217,7 @@
             // cb_altodesempenhoenergia
             // 
             this.cb_altodesempenhoenergia.AutoSize = true;
-            this.cb_altodesempenhoenergia.Checked = true;
-            this.cb_altodesempenhoenergia.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_altodesempenhoenergia.Location = new System.Drawing.Point(487, 160);
+            this.cb_altodesempenhoenergia.Location = new System.Drawing.Point(493, 148);
             this.cb_altodesempenhoenergia.Name = "cb_altodesempenhoenergia";
             this.cb_altodesempenhoenergia.Size = new System.Drawing.Size(155, 17);
             this.cb_altodesempenhoenergia.TabIndex = 57;
@@ -209,9 +227,9 @@
             // 
             // btn_Copiar
             // 
-            this.btn_Copiar.Location = new System.Drawing.Point(220, 287);
+            this.btn_Copiar.Location = new System.Drawing.Point(162, 287);
             this.btn_Copiar.Name = "btn_Copiar";
-            this.btn_Copiar.Size = new System.Drawing.Size(195, 52);
+            this.btn_Copiar.Size = new System.Drawing.Size(125, 52);
             this.btn_Copiar.TabIndex = 56;
             this.btn_Copiar.Text = "Copiar programas para C:\\TI";
             this.btn_Copiar.UseVisualStyleBackColor = true;
@@ -220,7 +238,7 @@
             // 
             this.label_WINDOWS.AutoSize = true;
             this.label_WINDOWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_WINDOWS.Location = new System.Drawing.Point(458, 66);
+            this.label_WINDOWS.Location = new System.Drawing.Point(464, 44);
             this.label_WINDOWS.Name = "label_WINDOWS";
             this.label_WINDOWS.Size = new System.Drawing.Size(82, 16);
             this.label_WINDOWS.TabIndex = 55;
@@ -230,7 +248,7 @@
             // 
             this.label_SISTEMA.AutoSize = true;
             this.label_SISTEMA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SISTEMA.Location = new System.Drawing.Point(317, 65);
+            this.label_SISTEMA.Location = new System.Drawing.Point(325, 43);
             this.label_SISTEMA.Name = "label_SISTEMA";
             this.label_SISTEMA.Size = new System.Drawing.Size(73, 16);
             this.label_SISTEMA.TabIndex = 54;
@@ -241,7 +259,7 @@
             // 
             this.label_SOFTWARES.AutoSize = true;
             this.label_SOFTWARES.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SOFTWARES.Location = new System.Drawing.Point(167, 65);
+            this.label_SOFTWARES.Location = new System.Drawing.Point(173, 43);
             this.label_SOFTWARES.Name = "label_SOFTWARES";
             this.label_SOFTWARES.Size = new System.Drawing.Size(102, 16);
             this.label_SOFTWARES.TabIndex = 53;
@@ -252,7 +270,7 @@
             // 
             this.label_ACESSOREMOTO.AutoSize = true;
             this.label_ACESSOREMOTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ACESSOREMOTO.Location = new System.Drawing.Point(13, 65);
+            this.label_ACESSOREMOTO.Location = new System.Drawing.Point(19, 44);
             this.label_ACESSOREMOTO.Name = "label_ACESSOREMOTO";
             this.label_ACESSOREMOTO.Size = new System.Drawing.Size(137, 16);
             this.label_ACESSOREMOTO.TabIndex = 52;
@@ -261,7 +279,7 @@
             // pb_aspiahost
             // 
             this.pb_aspiahost.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_aspiahost.Location = new System.Drawing.Point(16, 85);
+            this.pb_aspiahost.Location = new System.Drawing.Point(22, 73);
             this.pb_aspiahost.Name = "pb_aspiahost";
             this.pb_aspiahost.Size = new System.Drawing.Size(20, 20);
             this.pb_aspiahost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,9 +289,7 @@
             // cb_aspiahost
             // 
             this.cb_aspiahost.AutoSize = true;
-            this.cb_aspiahost.Checked = true;
-            this.cb_aspiahost.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_aspiahost.Location = new System.Drawing.Point(44, 88);
+            this.cb_aspiahost.Location = new System.Drawing.Point(50, 76);
             this.cb_aspiahost.Name = "cb_aspiahost";
             this.cb_aspiahost.Size = new System.Drawing.Size(74, 17);
             this.cb_aspiahost.TabIndex = 50;
@@ -284,7 +300,7 @@
             // pb_Firewall_3050
             // 
             this.pb_Firewall_3050.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Firewall_3050.Location = new System.Drawing.Point(461, 85);
+            this.pb_Firewall_3050.Location = new System.Drawing.Point(467, 73);
             this.pb_Firewall_3050.Name = "pb_Firewall_3050";
             this.pb_Firewall_3050.Size = new System.Drawing.Size(20, 20);
             this.pb_Firewall_3050.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,7 +311,7 @@
             // pb_NFE
             // 
             this.pb_NFE.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_NFE.Location = new System.Drawing.Point(322, 205);
+            this.pb_NFE.Location = new System.Drawing.Point(328, 197);
             this.pb_NFE.Name = "pb_NFE";
             this.pb_NFE.Size = new System.Drawing.Size(20, 20);
             this.pb_NFE.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,7 +321,7 @@
             // pb_DesativarUAC
             // 
             this.pb_DesativarUAC.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_DesativarUAC.Location = new System.Drawing.Point(461, 109);
+            this.pb_DesativarUAC.Location = new System.Drawing.Point(467, 97);
             this.pb_DesativarUAC.Name = "pb_DesativarUAC";
             this.pb_DesativarUAC.Size = new System.Drawing.Size(20, 20);
             this.pb_DesativarUAC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +331,7 @@
             // pb_AlphaSis
             // 
             this.pb_AlphaSis.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_AlphaSis.Location = new System.Drawing.Point(322, 109);
+            this.pb_AlphaSis.Location = new System.Drawing.Point(328, 97);
             this.pb_AlphaSis.Name = "pb_AlphaSis";
             this.pb_AlphaSis.Size = new System.Drawing.Size(20, 20);
             this.pb_AlphaSis.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,7 +341,7 @@
             // pb_Code39
             // 
             this.pb_Code39.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Code39.Location = new System.Drawing.Point(322, 157);
+            this.pb_Code39.Location = new System.Drawing.Point(328, 147);
             this.pb_Code39.Name = "pb_Code39";
             this.pb_Code39.Size = new System.Drawing.Size(20, 20);
             this.pb_Code39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -335,7 +351,7 @@
             // pb_Winrar
             // 
             this.pb_Winrar.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Winrar.Location = new System.Drawing.Point(170, 181);
+            this.pb_Winrar.Location = new System.Drawing.Point(176, 146);
             this.pb_Winrar.Name = "pb_Winrar";
             this.pb_Winrar.Size = new System.Drawing.Size(20, 20);
             this.pb_Winrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -345,7 +361,7 @@
             // pb_TempDir
             // 
             this.pb_TempDir.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_TempDir.Location = new System.Drawing.Point(322, 181);
+            this.pb_TempDir.Location = new System.Drawing.Point(328, 172);
             this.pb_TempDir.Name = "pb_TempDir";
             this.pb_TempDir.Size = new System.Drawing.Size(20, 20);
             this.pb_TempDir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,17 +371,18 @@
             // pb_OneDrive
             // 
             this.pb_OneDrive.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_OneDrive.Location = new System.Drawing.Point(461, 133);
+            this.pb_OneDrive.Location = new System.Drawing.Point(467, 121);
             this.pb_OneDrive.Name = "pb_OneDrive";
             this.pb_OneDrive.Size = new System.Drawing.Size(20, 20);
             this.pb_OneDrive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_OneDrive.TabIndex = 42;
             this.pb_OneDrive.TabStop = false;
+            this.pb_OneDrive.Click += new System.EventHandler(this.pb_OneDrive_Click);
             // 
             // pb_FusionInventory
             // 
             this.pb_FusionInventory.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_FusionInventory.Location = new System.Drawing.Point(170, 133);
+            this.pb_FusionInventory.Location = new System.Drawing.Point(176, 170);
             this.pb_FusionInventory.Name = "pb_FusionInventory";
             this.pb_FusionInventory.Size = new System.Drawing.Size(20, 20);
             this.pb_FusionInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +392,7 @@
             // pb_Lightshot
             // 
             this.pb_Lightshot.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Lightshot.Location = new System.Drawing.Point(170, 109);
+            this.pb_Lightshot.Location = new System.Drawing.Point(176, 96);
             this.pb_Lightshot.Name = "pb_Lightshot";
             this.pb_Lightshot.Size = new System.Drawing.Size(20, 20);
             this.pb_Lightshot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +402,7 @@
             // pb_Chrome
             // 
             this.pb_Chrome.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Chrome.Location = new System.Drawing.Point(170, 85);
+            this.pb_Chrome.Location = new System.Drawing.Point(176, 72);
             this.pb_Chrome.Name = "pb_Chrome";
             this.pb_Chrome.Size = new System.Drawing.Size(20, 20);
             this.pb_Chrome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -395,7 +412,7 @@
             // pb_Java
             // 
             this.pb_Java.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Java.Location = new System.Drawing.Point(170, 157);
+            this.pb_Java.Location = new System.Drawing.Point(176, 121);
             this.pb_Java.Name = "pb_Java";
             this.pb_Java.Size = new System.Drawing.Size(20, 20);
             this.pb_Java.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -405,7 +422,7 @@
             // pb_BI
             // 
             this.pb_BI.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_BI.Location = new System.Drawing.Point(322, 229);
+            this.pb_BI.Location = new System.Drawing.Point(328, 222);
             this.pb_BI.Name = "pb_BI";
             this.pb_BI.Size = new System.Drawing.Size(20, 20);
             this.pb_BI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -415,7 +432,7 @@
             // pb_AnyDesk
             // 
             this.pb_AnyDesk.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_AnyDesk.Location = new System.Drawing.Point(16, 109);
+            this.pb_AnyDesk.Location = new System.Drawing.Point(22, 97);
             this.pb_AnyDesk.Name = "pb_AnyDesk";
             this.pb_AnyDesk.Size = new System.Drawing.Size(20, 20);
             this.pb_AnyDesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -425,7 +442,7 @@
             // pb_Firebird
             // 
             this.pb_Firebird.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Firebird.Location = new System.Drawing.Point(322, 85);
+            this.pb_Firebird.Location = new System.Drawing.Point(328, 73);
             this.pb_Firebird.Name = "pb_Firebird";
             this.pb_Firebird.Size = new System.Drawing.Size(20, 20);
             this.pb_Firebird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -436,7 +453,7 @@
             // pb_TeamViewer
             // 
             this.pb_TeamViewer.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_TeamViewer.Location = new System.Drawing.Point(16, 133);
+            this.pb_TeamViewer.Location = new System.Drawing.Point(22, 121);
             this.pb_TeamViewer.Name = "pb_TeamViewer";
             this.pb_TeamViewer.Size = new System.Drawing.Size(20, 20);
             this.pb_TeamViewer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -446,7 +463,7 @@
             // pb_UltraVNC
             // 
             this.pb_UltraVNC.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_UltraVNC.Location = new System.Drawing.Point(16, 157);
+            this.pb_UltraVNC.Location = new System.Drawing.Point(22, 145);
             this.pb_UltraVNC.Name = "pb_UltraVNC";
             this.pb_UltraVNC.Size = new System.Drawing.Size(20, 20);
             this.pb_UltraVNC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -456,31 +473,18 @@
             // pb_Capicom
             // 
             this.pb_Capicom.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_Capicom.Location = new System.Drawing.Point(322, 133);
+            this.pb_Capicom.Location = new System.Drawing.Point(328, 121);
             this.pb_Capicom.Name = "pb_Capicom";
             this.pb_Capicom.Size = new System.Drawing.Size(20, 20);
             this.pb_Capicom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Capicom.TabIndex = 32;
             this.pb_Capicom.TabStop = false;
             // 
-            // cb_update
-            // 
-            this.cb_update.AutoSize = true;
-            this.cb_update.Location = new System.Drawing.Point(444, 264);
-            this.cb_update.Name = "cb_update";
-            this.cb_update.Size = new System.Drawing.Size(180, 17);
-            this.cb_update.TabIndex = 31;
-            this.cb_update.Text = "Baixar novas versões da internet";
-            this.cb_update.UseVisualStyleBackColor = true;
-            this.cb_update.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
             // cb_firewall_3050
             // 
             this.cb_firewall_3050.AutoSize = true;
-            this.cb_firewall_3050.Checked = true;
-            this.cb_firewall_3050.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_firewall_3050.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cb_firewall_3050.Location = new System.Drawing.Point(487, 88);
+            this.cb_firewall_3050.Location = new System.Drawing.Point(493, 76);
             this.cb_firewall_3050.Name = "cb_firewall_3050";
             this.cb_firewall_3050.Size = new System.Drawing.Size(160, 17);
             this.cb_firewall_3050.TabIndex = 30;
@@ -488,23 +492,10 @@
             this.cb_firewall_3050.UseVisualStyleBackColor = true;
             this.cb_firewall_3050.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label_online
-            // 
-            this.label_online.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_online.Location = new System.Drawing.Point(179, 19);
-            this.label_online.Name = "label_online";
-            this.label_online.Size = new System.Drawing.Size(311, 19);
-            this.label_online.TabIndex = 28;
-            this.label_online.Text = "Procurando servidor local...";
-            this.label_online.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_online.Click += new System.EventHandler(this.label_online_Click);
-            // 
             // cb_nfe
             // 
             this.cb_nfe.AutoSize = true;
-            this.cb_nfe.Checked = true;
-            this.cb_nfe.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_nfe.Location = new System.Drawing.Point(348, 208);
+            this.cb_nfe.Location = new System.Drawing.Point(354, 200);
             this.cb_nfe.Name = "cb_nfe";
             this.cb_nfe.Size = new System.Drawing.Size(47, 17);
             this.cb_nfe.TabIndex = 24;
@@ -512,36 +503,31 @@
             this.cb_nfe.UseVisualStyleBackColor = true;
             this.cb_nfe.CheckedChanged += new System.EventHandler(this.cb_nfe_CheckedChanged);
             // 
-            // cb_netgent
+            // cb_uac
             // 
-            this.cb_netgent.AutoSize = true;
-            this.cb_netgent.Checked = true;
-            this.cb_netgent.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_netgent.Location = new System.Drawing.Point(487, 112);
-            this.cb_netgent.Name = "cb_netgent";
-            this.cb_netgent.Size = new System.Drawing.Size(96, 17);
-            this.cb_netgent.TabIndex = 23;
-            this.cb_netgent.Text = "Desativar UAC";
-            this.cb_netgent.UseVisualStyleBackColor = true;
+            this.cb_uac.AutoSize = true;
+            this.cb_uac.Location = new System.Drawing.Point(493, 100);
+            this.cb_uac.Name = "cb_uac";
+            this.cb_uac.Size = new System.Drawing.Size(96, 17);
+            this.cb_uac.TabIndex = 23;
+            this.cb_uac.Text = "Desativar UAC";
+            this.cb_uac.UseVisualStyleBackColor = true;
             // 
             // cb_alphasis
             // 
             this.cb_alphasis.AutoSize = true;
-            this.cb_alphasis.Checked = true;
-            this.cb_alphasis.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_alphasis.Location = new System.Drawing.Point(348, 112);
+            this.cb_alphasis.Location = new System.Drawing.Point(354, 100);
             this.cb_alphasis.Name = "cb_alphasis";
             this.cb_alphasis.Size = new System.Drawing.Size(67, 17);
             this.cb_alphasis.TabIndex = 22;
             this.cb_alphasis.Text = "AlphaSis";
             this.cb_alphasis.UseVisualStyleBackColor = true;
+            this.cb_alphasis.CheckedChanged += new System.EventHandler(this.cb_alphasis_CheckedChanged);
             // 
             // cb_java
             // 
             this.cb_java.AutoSize = true;
-            this.cb_java.Checked = true;
-            this.cb_java.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_java.Location = new System.Drawing.Point(197, 160);
+            this.cb_java.Location = new System.Drawing.Point(202, 124);
             this.cb_java.Name = "cb_java";
             this.cb_java.Size = new System.Drawing.Size(49, 17);
             this.cb_java.TabIndex = 21;
@@ -553,7 +539,7 @@
             // 
             this.bt_unmarkall.Location = new System.Drawing.Point(11, 316);
             this.bt_unmarkall.Name = "bt_unmarkall";
-            this.bt_unmarkall.Size = new System.Drawing.Size(200, 23);
+            this.bt_unmarkall.Size = new System.Drawing.Size(145, 23);
             this.bt_unmarkall.TabIndex = 20;
             this.bt_unmarkall.Text = "Desmarcar todos";
             this.bt_unmarkall.UseVisualStyleBackColor = true;
@@ -563,7 +549,7 @@
             // 
             this.bt_markall.Location = new System.Drawing.Point(11, 287);
             this.bt_markall.Name = "bt_markall";
-            this.bt_markall.Size = new System.Drawing.Size(200, 23);
+            this.bt_markall.Size = new System.Drawing.Size(145, 23);
             this.bt_markall.TabIndex = 19;
             this.bt_markall.Text = "Marcar todos";
             this.bt_markall.UseVisualStyleBackColor = true;
@@ -584,9 +570,7 @@
             // cb_code39
             // 
             this.cb_code39.AutoSize = true;
-            this.cb_code39.Checked = true;
-            this.cb_code39.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_code39.Location = new System.Drawing.Point(348, 160);
+            this.cb_code39.Location = new System.Drawing.Point(354, 149);
             this.cb_code39.Name = "cb_code39";
             this.cb_code39.Size = new System.Drawing.Size(93, 17);
             this.cb_code39.TabIndex = 15;
@@ -597,9 +581,7 @@
             // cb_winrar
             // 
             this.cb_winrar.AutoSize = true;
-            this.cb_winrar.Checked = true;
-            this.cb_winrar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_winrar.Location = new System.Drawing.Point(196, 184);
+            this.cb_winrar.Location = new System.Drawing.Point(202, 149);
             this.cb_winrar.Name = "cb_winrar";
             this.cb_winrar.Size = new System.Drawing.Size(68, 17);
             this.cb_winrar.TabIndex = 14;
@@ -609,9 +591,7 @@
             // cb_tempdir
             // 
             this.cb_tempdir.AutoSize = true;
-            this.cb_tempdir.Checked = true;
-            this.cb_tempdir.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_tempdir.Location = new System.Drawing.Point(348, 184);
+            this.cb_tempdir.Location = new System.Drawing.Point(354, 175);
             this.cb_tempdir.Name = "cb_tempdir";
             this.cb_tempdir.Size = new System.Drawing.Size(95, 17);
             this.cb_tempdir.TabIndex = 13;
@@ -622,9 +602,7 @@
             // cb_onedrive
             // 
             this.cb_onedrive.AutoSize = true;
-            this.cb_onedrive.Checked = true;
-            this.cb_onedrive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_onedrive.Location = new System.Drawing.Point(487, 136);
+            this.cb_onedrive.Location = new System.Drawing.Point(493, 124);
             this.cb_onedrive.Name = "cb_onedrive";
             this.cb_onedrive.Size = new System.Drawing.Size(126, 17);
             this.cb_onedrive.TabIndex = 12;
@@ -632,24 +610,21 @@
             this.cb_onedrive.UseVisualStyleBackColor = true;
             this.cb_onedrive.CheckedChanged += new System.EventHandler(this.cb_onedrive_CheckedChanged);
             // 
-            // cb_librefirewall_3050
+            // cb_bi
             // 
-            this.cb_librefirewall_3050.AutoSize = true;
-            this.cb_librefirewall_3050.Checked = true;
-            this.cb_librefirewall_3050.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_librefirewall_3050.Location = new System.Drawing.Point(349, 232);
-            this.cb_librefirewall_3050.Name = "cb_librefirewall_3050";
-            this.cb_librefirewall_3050.Size = new System.Drawing.Size(36, 17);
-            this.cb_librefirewall_3050.TabIndex = 11;
-            this.cb_librefirewall_3050.Text = "BI";
-            this.cb_librefirewall_3050.UseVisualStyleBackColor = true;
+            this.cb_bi.AutoSize = true;
+            this.cb_bi.Location = new System.Drawing.Point(355, 225);
+            this.cb_bi.Name = "cb_bi";
+            this.cb_bi.Size = new System.Drawing.Size(36, 17);
+            this.cb_bi.TabIndex = 11;
+            this.cb_bi.Text = "BI";
+            this.cb_bi.UseVisualStyleBackColor = true;
+            this.cb_bi.CheckedChanged += new System.EventHandler(this.cb_librefirewall_3050_CheckedChanged);
             // 
             // cb_fusioninventory
             // 
             this.cb_fusioninventory.AutoSize = true;
-            this.cb_fusioninventory.Checked = true;
-            this.cb_fusioninventory.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_fusioninventory.Location = new System.Drawing.Point(196, 136);
+            this.cb_fusioninventory.Location = new System.Drawing.Point(202, 173);
             this.cb_fusioninventory.Name = "cb_fusioninventory";
             this.cb_fusioninventory.Size = new System.Drawing.Size(104, 17);
             this.cb_fusioninventory.TabIndex = 10;
@@ -659,9 +634,7 @@
             // cb_lightshot
             // 
             this.cb_lightshot.AutoSize = true;
-            this.cb_lightshot.Checked = true;
-            this.cb_lightshot.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_lightshot.Location = new System.Drawing.Point(196, 112);
+            this.cb_lightshot.Location = new System.Drawing.Point(202, 100);
             this.cb_lightshot.Name = "cb_lightshot";
             this.cb_lightshot.Size = new System.Drawing.Size(69, 17);
             this.cb_lightshot.TabIndex = 9;
@@ -672,9 +645,7 @@
             // cb_chrome
             // 
             this.cb_chrome.AutoSize = true;
-            this.cb_chrome.Checked = true;
-            this.cb_chrome.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_chrome.Location = new System.Drawing.Point(196, 88);
+            this.cb_chrome.Location = new System.Drawing.Point(202, 76);
             this.cb_chrome.Name = "cb_chrome";
             this.cb_chrome.Size = new System.Drawing.Size(99, 17);
             this.cb_chrome.TabIndex = 8;
@@ -684,9 +655,7 @@
             // cb_anydesk
             // 
             this.cb_anydesk.AutoSize = true;
-            this.cb_anydesk.Checked = true;
-            this.cb_anydesk.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_anydesk.Location = new System.Drawing.Point(44, 112);
+            this.cb_anydesk.Location = new System.Drawing.Point(50, 100);
             this.cb_anydesk.Name = "cb_anydesk";
             this.cb_anydesk.Size = new System.Drawing.Size(69, 17);
             this.cb_anydesk.TabIndex = 4;
@@ -696,9 +665,7 @@
             // cb_firebird
             // 
             this.cb_firebird.AutoSize = true;
-            this.cb_firebird.Checked = true;
-            this.cb_firebird.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_firebird.Location = new System.Drawing.Point(348, 88);
+            this.cb_firebird.Location = new System.Drawing.Point(354, 76);
             this.cb_firebird.Name = "cb_firebird";
             this.cb_firebird.Size = new System.Drawing.Size(60, 17);
             this.cb_firebird.TabIndex = 3;
@@ -709,9 +676,7 @@
             // cb_teamviewer
             // 
             this.cb_teamviewer.AutoSize = true;
-            this.cb_teamviewer.Checked = true;
-            this.cb_teamviewer.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_teamviewer.Location = new System.Drawing.Point(44, 136);
+            this.cb_teamviewer.Location = new System.Drawing.Point(50, 124);
             this.cb_teamviewer.Name = "cb_teamviewer";
             this.cb_teamviewer.Size = new System.Drawing.Size(85, 17);
             this.cb_teamviewer.TabIndex = 2;
@@ -721,9 +686,7 @@
             // cb_ultravnc
             // 
             this.cb_ultravnc.AutoSize = true;
-            this.cb_ultravnc.Checked = true;
-            this.cb_ultravnc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_ultravnc.Location = new System.Drawing.Point(44, 160);
+            this.cb_ultravnc.Location = new System.Drawing.Point(50, 148);
             this.cb_ultravnc.Name = "cb_ultravnc";
             this.cb_ultravnc.Size = new System.Drawing.Size(70, 17);
             this.cb_ultravnc.TabIndex = 1;
@@ -733,9 +696,7 @@
             // cb_capicom
             // 
             this.cb_capicom.AutoSize = true;
-            this.cb_capicom.Checked = true;
-            this.cb_capicom.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_capicom.Location = new System.Drawing.Point(348, 136);
+            this.cb_capicom.Location = new System.Drawing.Point(354, 124);
             this.cb_capicom.Name = "cb_capicom";
             this.cb_capicom.Size = new System.Drawing.Size(67, 17);
             this.cb_capicom.TabIndex = 0;
@@ -757,12 +718,6 @@
             // 
             this.time.Enabled = true;
             this.time.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // infOnline
-            // 
-            this.infOnline.Enabled = true;
-            this.infOnline.Interval = 5000;
-            this.infOnline.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // statusBarPanel1
             // 
@@ -840,7 +795,7 @@
         private System.Windows.Forms.CheckBox cb_teamviewer;
         private System.Windows.Forms.CheckBox cb_ultravnc;
         private System.Windows.Forms.CheckBox cb_chrome;
-        private System.Windows.Forms.CheckBox cb_librefirewall_3050;
+        private System.Windows.Forms.CheckBox cb_bi;
         private System.Windows.Forms.CheckBox cb_fusioninventory;
         private System.Windows.Forms.CheckBox cb_lightshot;
         private System.Windows.Forms.CheckBox cb_onedrive;
@@ -853,12 +808,10 @@
         private System.Windows.Forms.CheckBox cb_java;
         private System.Windows.Forms.CheckBox cb_alphasis;
         private System.Windows.Forms.CheckBox cb_nfe;
-        private System.Windows.Forms.CheckBox cb_netgent;
+        private System.Windows.Forms.CheckBox cb_uac;
         private System.Windows.Forms.Timer time;
-        private System.Windows.Forms.Label label_online;
         private System.Windows.Forms.Timer infOnline;
         private System.Windows.Forms.CheckBox cb_firewall_3050;
-        private System.Windows.Forms.CheckBox cb_update;
         private System.Windows.Forms.PictureBox pb_UltraVNC;
         private System.Windows.Forms.PictureBox pb_Capicom;
         private System.Windows.Forms.PictureBox pb_BI;
@@ -888,6 +841,8 @@
         private System.Windows.Forms.StatusBar statusBar1;
         private System.Windows.Forms.PictureBox pb_AltoDesempenho;
         private System.Windows.Forms.CheckBox cb_altodesempenhoenergia;
+        private System.Windows.Forms.Button btn_sistema;
+        private System.Windows.Forms.Button btn_usuario;
     }
 }
 

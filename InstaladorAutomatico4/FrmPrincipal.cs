@@ -38,9 +38,9 @@ namespace InstaladorAutomatico4
         string anydeskDestPath = @"C:\TI\Anydesk\";
         string anydeskInstaller_DestPath = @"C:\TI\Anydesk\InstalarAnydesk.bat";
 
-        string librefirewall_3050Installer_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\LibreFirewall_3050\InstalarLibreFirewall_3050.bat";
-        string librefirewall_3050DestPath = @"C:\TI\LibreFirewall_3050\";
-        string librefirewall_3050Installer_DestPath = @"C:\TI\Librefirewall_3050\InstalarLibreFirewall_3050.bat";
+        string biInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\BI\BI.bat";
+        string biDestPath = @"C:\TI\BI\";
+        string biInstaller_DestPath = @"C:\TI\BI\BI.bat";
 
         string javaInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Java\InstalarJava.bat";
         string javaDestPath = @"C:\TI\Java\";
@@ -98,30 +98,6 @@ namespace InstaladorAutomatico4
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
-            if (cb_update.Checked)
-            {
-                if (cb_teamviewer.Checked)
-                {
-                    InstalarTeamViewerOnline:
-                        if (File.Exists(teamviewerDestPath))
-                        {
-                            System.Net.WebClient client = new System.Net.WebClient();
-                            client.DownloadFile("https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe", @"C:\\TI\\TeamViewer\\TeamViewer_Setup_x64.exe");
-                            //client.DownloadFile("http://www.vparaty.com.br/instalador/nfe/InstalarNFEOnline.bat", @"C:\\TI\\NFE\\InstalarNFEOnline.bat");
-                            System.Diagnostics.Process.Start(teamviewerInstaller_DestPath);
-                        }
-                        else
-                        {
-                            Directory.CreateDirectory(teamviewerDestPath);
-                            goto InstalarTeamViewerOnline;
-                        }
-                }
-                //MessageBox.Show("Desenvolver...");
-            }
-            else
             {
                 if (cb_capicom.Checked)
                 {
@@ -222,17 +198,17 @@ namespace InstaladorAutomatico4
                     }
                 }
 
-                if (cb_librefirewall_3050.Checked)
+                if (cb_bi.Checked)
                 {
-                    if (File.Exists(librefirewall_3050Installer_DestPath))
+                    if (File.Exists(biInstaller_DestPath))
                     {
-                        System.Diagnostics.Process.Start(librefirewall_3050Installer_DestPath);
+                        System.Diagnostics.Process.Start(biInstaller_DestPath);
                     }
                     else
                     {
-                        Directory.CreateDirectory(librefirewall_3050DestPath);
-                        System.IO.File.Copy(librefirewall_3050Installer_SourcePath, librefirewall_3050Installer_DestPath, true);
-                        System.Diagnostics.Process.Start(librefirewall_3050Installer_DestPath);
+                        Directory.CreateDirectory(biDestPath);
+                        System.IO.File.Copy(biInstaller_SourcePath, biDestPath, true);
+                        System.Diagnostics.Process.Start(biInstaller_DestPath);
                     }
                 }
 
@@ -383,7 +359,7 @@ namespace InstaladorAutomatico4
                     }
                 }
 
-                if (cb_netgent.Checked)
+                if (cb_uac.Checked)
                 {
                     if (File.Exists(desativaruacInstaller_DestPath))
                     {
@@ -437,50 +413,56 @@ namespace InstaladorAutomatico4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            cb_capicom.Checked = true;
-            cb_ultravnc.Checked = true;
+            cb_aspiahost.Checked = true;
+            cb_anydesk.Checked = true;       
             cb_teamviewer.Checked = true;
-            cb_firebird.Checked = true;
-            cb_anydesk.Checked = true;
-            cb_librefirewall_3050.Checked = true;
-            cb_java.Checked = true;
+            cb_ultravnc.Checked = true;
+
             cb_chrome.Checked = true;
             cb_lightshot.Checked = true;
-            cb_fusioninventory.Checked = true;
-            cb_onedrive.Checked = true;
-            cb_tempdir.Checked = true;
+            cb_java.Checked = true;
             cb_winrar.Checked = true;
-            cb_code39.Checked = true;
+            cb_fusioninventory.Checked = true;
+
+            cb_firebird.Checked = true;
             cb_alphasis.Checked = true;
-            cb_netgent.Checked = true;
-            cb_aspiahost.Checked = true;
-            cb_firewall_3050.Checked = true;
+            cb_capicom.Checked = true;
+            cb_code39.Checked = true;
+            cb_tempdir.Checked = true;
             cb_nfe.Checked = true;
+            cb_bi.Checked = true;
+
+            cb_firewall_3050.Checked = true;
+            cb_uac.Checked = true;
+            cb_onedrive.Checked = true;
             cb_altodesempenhoenergia.Checked = true;
 
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            cb_capicom.Checked = false;
-            cb_ultravnc.Checked = false;
-            cb_teamviewer.Checked = false;
-            cb_firebird.Checked = false;
+            cb_aspiahost.Checked = false;
             cb_anydesk.Checked = false;
-            cb_librefirewall_3050.Checked = false;
-            cb_java.Checked = false;
+            cb_teamviewer.Checked = false;
+            cb_ultravnc.Checked = false;
+
             cb_chrome.Checked = false;
             cb_lightshot.Checked = false;
-            cb_fusioninventory.Checked = false;
-            cb_onedrive.Checked = false;
-            cb_tempdir.Checked = false;
+            cb_java.Checked = false;
             cb_winrar.Checked = false;
-            cb_code39.Checked = false;
+            cb_fusioninventory.Checked = false;
+
+            cb_firebird.Checked = false;
             cb_alphasis.Checked = false;
-            cb_netgent.Checked = false;
+            cb_capicom.Checked = false;
+            cb_code39.Checked = false;
+            cb_tempdir.Checked = false;
             cb_nfe.Checked = false;
-            cb_aspiahost.Checked = false;
+            cb_bi.Checked = false;
+
             cb_firewall_3050.Checked = false;
+            cb_uac.Checked = false;
+            cb_onedrive.Checked = false;
             cb_altodesempenhoenergia.Checked = false;
 
         }
@@ -573,7 +555,7 @@ namespace InstaladorAutomatico4
                 pb_AnyDesk.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\LibreFirewall_3050\\program\\sfirewall_3050.exe")) || (File.Exists("C:\\Program Files\\LibreFirewall_3050 (x86)\\program\\sfirewall_3050.exe")))
+            if ((File.Exists("C:\\Program Files\\bi\\program\\sfirewall_3050.exe")) || (File.Exists("C:\\Program Files\\bi (x86)\\program\\sfirewall_3050.exe")))
             {
                 pb_BI.Image = Properties.Resources.check_ok;
             }
@@ -583,7 +565,7 @@ namespace InstaladorAutomatico4
             }
 
 
-            if ((File.Exists("C:\\Program Files\\Java\\jre1.8.0_351\\bin\\javaw.exe")) || (File.Exists("C:\\Program Files (x86)\\Java\\jre1.8.0_351\\bin\\javaw.exe")))
+            if ((File.Exists("C:\\Program Files\\Java\\jre1.8.*\\bin\\javaw.exe")) || (File.Exists("C:\\Program Files (x86)\\Java\\jre1.8.*\\bin\\javaw.exe")))
             {
                 pb_Java.Image = Properties.Resources.check_ok;
             }
@@ -619,7 +601,7 @@ namespace InstaladorAutomatico4
                 pb_FusionInventory.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\OneDrive\\OneDrive.exe")) || (File.Exists("C:\\Program Files (x86)\\OneDrive\\OneDrive.exe")))
+            if ((File.Exists("C:\\Users\\felipe\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe")))
             {
                 pb_OneDrive.Image = Properties.Resources.check_ok;
             }
@@ -655,7 +637,7 @@ namespace InstaladorAutomatico4
                 pb_Code39.Image = Properties.Resources.check_error;
             }
 
-            if (((File.Exists("C:\\ambalphasis\\BDEADMIN.EXE")) && (File.Exists("C:\\app\\product\\11.2.0\\client_1\\network\\admin\\tnsnames.ora")) || ((File.Exists("C:\\ambalphasis\\BDEADMIN.EXE")) && (File.Exists("C:\\oracle\\product\\11.2.0\\client_1\\network\\admin\\tnsnames.ora")))))
+            if (((File.Exists("C:\\Program Files (x86)\\alphasis\\asdr_firebird\\asdr_firebird.exe")) || (File.Exists("C:\\Program Files\\alphasis\\asdr_firebird\\asdr_firebird.exe"))))
             {
                 pb_AlphaSis.Image = Properties.Resources.check_ok;
             }
@@ -702,36 +684,7 @@ namespace InstaladorAutomatico4
 
         }
 
-
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            Ping myPing = new Ping();
-            try
-            {
-                PingReply reply = myPing.Send("192.168.50.100", 10);
-                if (reply.Status == IPStatus.Success)
-                {
-                    label_online.Text = "Servidor local encontrado";
-                    label_online.ForeColor = Color.Blue;
-                    cb_update.Checked = false;
-                }
-                else
-                {
-                    label_online.Text = "Online";
-                    label_online.ForeColor = Color.Green;
-                    cb_update.Checked = true;
-                }
-            }
-
-            catch
-            {
-                label_online.Text = "Nenhum servidor encontrado";
-                label_online.ForeColor = Color.Red;
-            }
-
-        }
-
+                
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -838,6 +791,85 @@ namespace InstaladorAutomatico4
         }
 
         private void pb_Firewall_3050_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb_OneDrive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_3(object sender, EventArgs e)
+        {
+            cb_teamviewer.Checked = true;
+            cb_anydesk.Checked = true;
+            cb_aspiahost.Checked = true;
+            cb_ultravnc.Checked = true;
+        }
+
+
+
+        private void cb_librefirewall_3050_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            cb_aspiahost.Checked = true;
+            cb_anydesk.Checked = true;
+            cb_teamviewer.Checked = true;
+            cb_ultravnc.Checked = true;
+
+            cb_chrome.Checked = true;
+            cb_lightshot.Checked = true;
+            cb_java.Checked = true;
+            cb_winrar.Checked = true;
+            cb_fusioninventory.Checked = false;
+
+            cb_firebird.Checked = true;
+            cb_alphasis.Checked = true;
+            cb_capicom.Checked = true;
+            cb_code39.Checked = true;
+            cb_tempdir.Checked = true;
+            cb_nfe.Checked = true;
+            cb_bi.Checked = true;
+
+            cb_firewall_3050.Checked = true;
+            cb_uac.Checked = true;
+            cb_onedrive.Checked = true;
+            cb_altodesempenhoenergia.Checked = true;
+        }
+
+        private void btn_usuario_Click(object sender, EventArgs e)
+        {
+            cb_aspiahost.Checked = true;
+            cb_anydesk.Checked = true;
+            cb_teamviewer.Checked = true;
+            cb_ultravnc.Checked = false;
+
+            cb_chrome.Checked = true;
+            cb_lightshot.Checked = true;
+            cb_java.Checked = true;
+            cb_winrar.Checked = true;
+            cb_fusioninventory.Checked = false;
+
+            cb_firebird.Checked = false;
+            cb_alphasis.Checked = false;
+            cb_capicom.Checked = false;
+            cb_code39.Checked = false;
+            cb_tempdir.Checked = false;
+            cb_nfe.Checked = false;
+            cb_bi.Checked = false;
+
+            cb_firewall_3050.Checked = false;
+            cb_uac.Checked = true;
+            cb_onedrive.Checked = true;
+            cb_altodesempenhoenergia.Checked = false;
+        }
+
+        private void cb_alphasis_CheckedChanged(object sender, EventArgs e)
         {
 
         }
