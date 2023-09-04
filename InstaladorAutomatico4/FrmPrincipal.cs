@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace InstaladorAutomatico4
@@ -13,10 +16,6 @@ namespace InstaladorAutomatico4
         {
             InitializeComponent();
         }
-
-        string capicomInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Capicom\InstalarCapicom.bat";
-        string capicomDestPath = @"C:\TI\Capicom\";
-        string capicomInstaller_DestPath = @"C:\TI\Capicom\InstalarCapicom.bat";
 
         string ultravncInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\UltraVNC\InstalarUltraVNC.bat";
         string ultravncDestPath = @"C:\TI\UltraVNC\";
@@ -38,9 +37,9 @@ namespace InstaladorAutomatico4
         string anydeskDestPath = @"C:\TI\Anydesk\";
         string anydeskInstaller_DestPath = @"C:\TI\Anydesk\InstalarAnydesk.bat";
 
-        string biInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\BI\BI.bat";
+        string biInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\BI\InstalarBI.bat";
         string biDestPath = @"C:\TI\BI\";
-        string biInstaller_DestPath = @"C:\TI\BI\BI.bat";
+        string biInstaller_DestPath = @"C:\TI\BI\InstalarBI.bat";
 
         string javaInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Java\InstalarJava.bat";
         string javaDestPath = @"C:\TI\Java\";
@@ -54,9 +53,9 @@ namespace InstaladorAutomatico4
         string lightshotDestPath = @"C:\TI\Lightshot\";
         string lightshotInstaller_DestPath = @"C:\TI\Lightshot\InstalarLightshot.bat";
 
-        string fusioninventoryInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\FusionInventory\InstalarFusionInventory.bat";
-        string fusioninventoryDestPath = @"C:\TI\FusionInventory\";
-        string fusioninventoryInstaller_DestPath = @"C:\TI\FusionInventory\InstalarFusionInventory.bat";
+        string glpiagentInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\FusionInventory\InstalarFusionInventory.bat";
+        string glpiagentDestPath = @"C:\TI\FusionInventory\";
+        string glpiagentInstaller_DestPath = @"C:\TI\FusionInventory\InstalarFusionInventory.bat";
 
         string onedriveInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Registros\InstalarOneDrive.bat";
         string onedriveDestPath = @"C:\TI\OneDrive\";
@@ -68,16 +67,11 @@ namespace InstaladorAutomatico4
         string winrarDestPath = @"C:\TI\Winrar\";
         string winrarInstaller_DestPath = @"C:\TI\Winrar\InstalarWinrar.bat";
 
-        string code39Installer_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Registros\Code39.ttf";
-        string code39DestPath = @"C:\TI\Registros";
-        string code39DestPathSys = @"C:\Windows\Fonts";
-        string code39Installer_DestPath = @"C:\TI\Registros\Code39.ttf";
+        string code39Installer_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Code39\InstalarCode39.bat";
+        string code39DestPath = @"C:\TI\Code39";
+        string code39Installer_DestPath = @"C:\TI\Code39\InstalarCode39.bat";
         string registros_DestPath = @"C:\TI\Registros";
-
-        string nfeInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\NFE\InstalarNFE.bat";
-        string nfeDestPath = @"C:\TI\NFE\";
-        string nfeInstaller_DestPath = @"C:\TI\NFE\InstalarNFE.bat";
-        
+    
         string desativaruacInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\DesativarUAC\InstalarDesativarUAC.bat";
         string desativaruacDestPath = @"C:\TI\DesativarUAC\";
         string desativaruacInstaller_DestPath = @"C:\TI\DesativarUAC\InstalarDesativarUAC.bat";
@@ -94,22 +88,24 @@ namespace InstaladorAutomatico4
         string AltoDesempenhoEnergiaDestPath = @"C:\TI\Registros\";
         string AltoDesempenhoEnergiaInstaller_DestPath = @"C:\TI\Registros\AltoDesempenhoEnergia.bat";
 
-
+        string WingetInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Winget\InstallWinget.ps1";
+        string WingetDestPath = @"C:\TI\Winget\";
+        string WingetInstaller_DestPath = @"C:\TI\Winget\InstallWinget.ps1";
 
         private void button1_Click(object sender, EventArgs e)
         {
             {
-                if (cb_capicom.Checked)
+                if (cb_aspiahost.Checked)
                 {
-                    if (File.Exists(capicomInstaller_DestPath))
+                    if (File.Exists(aspiahostInstaller_DestPath))
                     {
-                        System.Diagnostics.Process.Start(capicomInstaller_DestPath);
+                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
                     }
                     else
                     {
-                        Directory.CreateDirectory(capicomDestPath);
-                        System.IO.File.Copy(capicomInstaller_SourcePath, capicomInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(capicomInstaller_DestPath);
+                        Directory.CreateDirectory(aspiahostDestPath);
+                        System.IO.File.Copy(aspiahostInstaller_SourcePath, aspiahostInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
                     }
                 }
 
@@ -254,17 +250,17 @@ namespace InstaladorAutomatico4
                     }
                 }
 
-                if (cb_fusioninventory.Checked)
+                if (cb_glpiagent.Checked)
                 {
-                    if (File.Exists(fusioninventoryInstaller_DestPath))
+                    if (File.Exists(glpiagentInstaller_DestPath))
                     {
-                        System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
+                        System.Diagnostics.Process.Start(glpiagentInstaller_DestPath);
                     }
                     else
                     {
-                        Directory.CreateDirectory(fusioninventoryDestPath);
-                        System.IO.File.Copy(fusioninventoryInstaller_SourcePath, fusioninventoryInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(fusioninventoryInstaller_DestPath);
+                        Directory.CreateDirectory(glpiagentDestPath);
+                        System.IO.File.Copy(glpiagentInstaller_SourcePath, glpiagentInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(glpiagentInstaller_DestPath);
                     }
                 }
 
@@ -315,13 +311,15 @@ namespace InstaladorAutomatico4
                     {
                         if (File.Exists(code39Installer_DestPath))
                         {
-                            System.IO.File.Copy(code39Installer_DestPath, code39DestPathSys, true);
+                            System.Diagnostics.Process.Start(code39Installer_DestPath);
+                            //System.IO.File.Copy(code39ttf, code39DestPathSys, true);
                         }
                         else
                         {
                             Directory.CreateDirectory(code39DestPath);
                             System.IO.File.Copy(code39Installer_SourcePath, code39Installer_DestPath, true);
-                         }
+                            System.Diagnostics.Process.Start(code39Installer_DestPath);
+                        }
                     }
                     else
                     {
@@ -345,20 +343,6 @@ namespace InstaladorAutomatico4
                     }
                 }
 
-                if (cb_nfe.Checked)
-                {
-                    if (File.Exists(nfeInstaller_DestPath))
-                    {
-                        System.Diagnostics.Process.Start(nfeInstaller_DestPath);
-                    }
-                    else
-                    {
-                        Directory.CreateDirectory(nfeDestPath);
-                        System.IO.File.Copy(nfeInstaller_SourcePath, nfeInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(nfeInstaller_DestPath);
-                    }
-                }
-
                 if (cb_uac.Checked)
                 {
                     if (File.Exists(desativaruacInstaller_DestPath))
@@ -373,20 +357,6 @@ namespace InstaladorAutomatico4
                     }
                 }
 
-                if (cb_aspiahost.Checked)
-                {
-                    if (File.Exists(aspiahostInstaller_DestPath))
-                    {
-                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
-                    }
-                    else
-                    {
-                        Directory.CreateDirectory(aspiahostDestPath);
-                        System.IO.File.Copy(aspiahostInstaller_SourcePath, aspiahostInstaller_DestPath, true);
-                        System.Diagnostics.Process.Start(aspiahostInstaller_DestPath);
-                    }
-                }
-
                 if (cb_firewall_3050.Checked)
                 {
                     if (File.Exists(firewall_3050Installer_DestPath))
@@ -398,6 +368,20 @@ namespace InstaladorAutomatico4
                         Directory.CreateDirectory(firewall_3050DestPath);
                         System.IO.File.Copy(firewall_3050Installer_SourcePath, firewall_3050Installer_DestPath, true);
                         System.Diagnostics.Process.Start(firewall_3050Installer_DestPath);
+                    }
+                }
+
+                if (cb_winget.Checked)
+                {
+                    if (File.Exists(WingetInstaller_DestPath))
+                    {
+                        System.Diagnostics.Process.Start(WingetInstaller_DestPath);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(WingetDestPath);
+                        System.IO.File.Copy(WingetInstaller_SourcePath, WingetInstaller_DestPath, true);
+                        System.Diagnostics.Process.Start(WingetInstaller_DestPath);
                     }
                 }
             }
@@ -422,20 +406,19 @@ namespace InstaladorAutomatico4
             cb_lightshot.Checked = true;
             cb_java.Checked = true;
             cb_winrar.Checked = true;
-            cb_fusioninventory.Checked = true;
+            cb_glpiagent.Checked = true;
 
             cb_firebird.Checked = true;
             cb_alphasis.Checked = true;
-            cb_capicom.Checked = true;
             cb_code39.Checked = true;
             cb_tempdir.Checked = true;
-            cb_nfe.Checked = true;
             cb_bi.Checked = true;
 
             cb_firewall_3050.Checked = true;
             cb_uac.Checked = true;
             cb_onedrive.Checked = true;
             cb_altodesempenhoenergia.Checked = true;
+            cb_winget.Checked = false;
 
         }
 
@@ -450,29 +433,23 @@ namespace InstaladorAutomatico4
             cb_lightshot.Checked = false;
             cb_java.Checked = false;
             cb_winrar.Checked = false;
-            cb_fusioninventory.Checked = false;
+            cb_glpiagent.Checked = false;
 
             cb_firebird.Checked = false;
             cb_alphasis.Checked = false;
-            cb_capicom.Checked = false;
             cb_code39.Checked = false;
             cb_tempdir.Checked = false;
-            cb_nfe.Checked = false;
             cb_bi.Checked = false;
 
             cb_firewall_3050.Checked = false;
             cb_uac.Checked = false;
             cb_onedrive.Checked = false;
             cb_altodesempenhoenergia.Checked = false;
+            cb_winget.Checked = false;
 
         }
 
         private void rd_desativaruac_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rd_nfe_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -510,15 +487,6 @@ namespace InstaladorAutomatico4
         {
             statusBar1.Panels[0].Text = DateTime.Now.ToString("hh:mm:ss tt");
 
-            if ((File.Exists("C:\\Windows\\SysWOW64\\rserver30\\rserver3.exe")) || (File.Exists("C:\\Windows\\System32\\rserver30\\rserver3.exe")))
-            {
-                pb_Capicom.Image = Properties.Resources.check_ok;
-            }
-            else
-            {
-                pb_Capicom.Image = Properties.Resources.check_error;
-            }
-
             if ((File.Exists("C:\\Program Files\\uvnc bvba\\UltraVNC\\winvnc.exe")) || (File.Exists("C:\\Program Files (x86)\\uvnc bvba\\UltraVNC\\winvnc.exe")))
             {
                 pb_UltraVNC.Image = Properties.Resources.check_ok;
@@ -555,17 +523,17 @@ namespace InstaladorAutomatico4
                 pb_AnyDesk.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\bi\\program\\sfirewall_3050.exe")) || (File.Exists("C:\\Program Files\\bi (x86)\\program\\sfirewall_3050.exe")))
-            {
-                pb_BI.Image = Properties.Resources.check_ok;
-            }
-            else
+            if (Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}", "location", null) == null)
             {
                 pb_BI.Image = Properties.Resources.check_error;
             }
+            else
+            {
+                pb_BI.Image = Properties.Resources.check_ok;
+            }
 
 
-            if ((File.Exists("C:\\Program Files\\Java\\jre1.8.*\\bin\\javaw.exe")) || (File.Exists("C:\\Program Files (x86)\\Java\\jre1.8.*\\bin\\javaw.exe")))
+            if ((File.Exists("C:\\Program Files\\Java\\jre-1.8\\bin\\javaw.exe")))
             {
                 pb_Java.Image = Properties.Resources.check_ok;
             }
@@ -592,7 +560,7 @@ namespace InstaladorAutomatico4
                 pb_Lightshot.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\FusionInventory-Agent\\perl\\bin\\fusioninventory-agent.exe")) || (File.Exists("C:\\Program Files (x86)\\FusionInventory-Agent\\perl\\bin\\fusioninventory-agent.exe")))
+            if ((File.Exists("C:\\Program Files\\FusionInventory-Agent\\perl\\bin\\glpiagent-agent.exe")) || (File.Exists("C:\\Program Files (x86)\\FusionInventory-Agent\\perl\\bin\\glpiagent-agent.exe")))
             {
                 pb_FusionInventory.Image = Properties.Resources.check_ok;
             }
@@ -608,6 +576,15 @@ namespace InstaladorAutomatico4
             else
             {
                 pb_OneDrive.Image = Properties.Resources.check_error;
+            }
+
+            if (Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts", "Bar-Code 39 (TrueType)", null) == null)
+            {
+                pb_Code39.Image = Properties.Resources.check_error;
+            }
+            else
+            {
+                pb_Code39.Image = Properties.Resources.check_ok;
             }
 
             if (Directory.Exists("C:\\TEMP"))
@@ -628,15 +605,6 @@ namespace InstaladorAutomatico4
                 pb_Winrar.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files (x86)\\K-Lite Codec Pack\\Tools\\mediainfo.exe")) || (File.Exists("C:\\Program Files\\K-Lite Codec Pack\\Tools\\mediainfo.exe")))
-            {
-                pb_Code39.Image = Properties.Resources.check_ok;
-            }
-            else
-            {
-                pb_Code39.Image = Properties.Resources.check_error;
-            }
-
             if (((File.Exists("C:\\Program Files (x86)\\alphasis\\asdr_firebird\\asdr_firebird.exe")) || (File.Exists("C:\\Program Files\\alphasis\\asdr_firebird\\asdr_firebird.exe"))))
             {
                 pb_AlphaSis.Image = Properties.Resources.check_ok;
@@ -646,22 +614,13 @@ namespace InstaladorAutomatico4
                 pb_AlphaSis.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\TI\\Registros\\DesabilitarUAC_OK.txt")))
+            if ((int?)Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System", "EnableLUA", null) == 0)
             {
                 pb_DesativarUAC.Image = Properties.Resources.check_ok;
             }
             else
             {
                 pb_DesativarUAC.Image = Properties.Resources.check_error;
-            }
-
-            if ((File.Exists("C:\\Program Files\\NFE Software\\NFE\\NFEUI.exe")) || (File.Exists("C:\\Program Files (x86)\\NFE Software\\NFE\\NFEUI.exe")))
-            {
-                pb_NFE.Image = Properties.Resources.check_ok;
-            }
-            else
-            {
-                pb_NFE.Image = Properties.Resources.check_error;
             }
 
             if ((File.Exists("C:\\TI\\Registros\\Firebird_3050.txt")))
@@ -682,6 +641,14 @@ namespace InstaladorAutomatico4
                 pb_aspiahost.Image = Properties.Resources.check_error;
             }
 
+            if (Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\StagingInfo\Microsoft.Winget.Source_2023.420.1852.4_neutral__8wekyb3d8bbwe", "DownloadSize", null) == null)
+            {
+                pb_winget.Image = Properties.Resources.check_ok;
+            }
+            else
+            {
+                pb_winget.Image = Properties.Resources.check_error;
+            }
         }
 
                 
@@ -730,11 +697,6 @@ namespace InstaladorAutomatico4
 
         }
 
-        private void cb_capicom_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cb_tempdir_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -771,11 +733,6 @@ namespace InstaladorAutomatico4
         }
 
         private void softwares_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cb_nfe_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -826,20 +783,19 @@ namespace InstaladorAutomatico4
             cb_lightshot.Checked = true;
             cb_java.Checked = true;
             cb_winrar.Checked = true;
-            cb_fusioninventory.Checked = false;
+            cb_glpiagent.Checked = false;
 
             cb_firebird.Checked = true;
             cb_alphasis.Checked = true;
-            cb_capicom.Checked = true;
             cb_code39.Checked = true;
             cb_tempdir.Checked = true;
-            cb_nfe.Checked = true;
             cb_bi.Checked = true;
 
             cb_firewall_3050.Checked = true;
             cb_uac.Checked = true;
             cb_onedrive.Checked = true;
             cb_altodesempenhoenergia.Checked = true;
+            cb_winget.Checked = true;
         }
 
         private void btn_usuario_Click(object sender, EventArgs e)
@@ -853,23 +809,58 @@ namespace InstaladorAutomatico4
             cb_lightshot.Checked = true;
             cb_java.Checked = true;
             cb_winrar.Checked = true;
-            cb_fusioninventory.Checked = false;
+            cb_glpiagent.Checked = false;
 
             cb_firebird.Checked = false;
             cb_alphasis.Checked = false;
-            cb_capicom.Checked = false;
             cb_code39.Checked = false;
             cb_tempdir.Checked = false;
-            cb_nfe.Checked = false;
             cb_bi.Checked = false;
 
             cb_firewall_3050.Checked = false;
             cb_uac.Checked = true;
             cb_onedrive.Checked = true;
             cb_altodesempenhoenergia.Checked = false;
+            cb_winget.Checked = false;
         }
 
         private void cb_alphasis_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            cb_aspiahost.Checked = true;
+            cb_anydesk.Checked = true;
+            cb_teamviewer.Checked = true;
+            cb_ultravnc.Checked = true;
+
+            cb_chrome.Checked = true;
+            cb_lightshot.Checked = true;
+            cb_java.Checked = true;
+            cb_winrar.Checked = true;
+            cb_glpiagent.Checked = true;
+
+            cb_firebird.Checked = false;
+            cb_alphasis.Checked = false;
+            cb_code39.Checked = false;
+            cb_tempdir.Checked = false;
+            cb_bi.Checked = false;
+
+            cb_firewall_3050.Checked = false;
+            cb_uac.Checked = false;
+            cb_onedrive.Checked = false;
+            cb_altodesempenhoenergia.Checked = false;
+            cb_winget.Checked = true;
+        }
+
+        private void cb_glpiagent_CheckedChanged(object sender, EventArgs e)
         {
 
         }
