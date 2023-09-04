@@ -53,9 +53,9 @@ namespace InstaladorAutomatico4
         string lightshotDestPath = @"C:\TI\Lightshot\";
         string lightshotInstaller_DestPath = @"C:\TI\Lightshot\InstalarLightshot.bat";
 
-        string glpiagentInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\FusionInventory\InstalarFusionInventory.bat";
-        string glpiagentDestPath = @"C:\TI\FusionInventory\";
-        string glpiagentInstaller_DestPath = @"C:\TI\FusionInventory\InstalarFusionInventory.bat";
+        string glpiagentInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\GLPIAgent\InstalarGLPIAgent.bat";
+        string glpiagentDestPath = @"C:\TI\GLPIAgent\";
+        string glpiagentInstaller_DestPath = @"C:\TI\GLPIAgent\InstalarGLPIAgent.bat";
 
         string onedriveInstaller_SourcePath = @"\\SERVIDOR\InstaladorAutomatico\Registros\InstalarOneDrive.bat";
         string onedriveDestPath = @"C:\TI\OneDrive\";
@@ -560,13 +560,13 @@ namespace InstaladorAutomatico4
                 pb_Lightshot.Image = Properties.Resources.check_error;
             }
 
-            if ((File.Exists("C:\\Program Files\\FusionInventory-Agent\\perl\\bin\\glpiagent-agent.exe")) || (File.Exists("C:\\Program Files (x86)\\FusionInventory-Agent\\perl\\bin\\glpiagent-agent.exe")))
+            if ((File.Exists("C:\\Program Files\\GLPIAgent-Agent\\perl\\bin\\glpiagent-agent.exe")) || (File.Exists("C:\\Program Files (x86)\\GLPIAgent-Agent\\perl\\bin\\glpiagent-agent.exe")))
             {
-                pb_FusionInventory.Image = Properties.Resources.check_ok;
+                pb_GLPIAgent.Image = Properties.Resources.check_ok;
             }
             else
             {
-                pb_FusionInventory.Image = Properties.Resources.check_error;
+                pb_GLPIAgent.Image = Properties.Resources.check_error;
             }
 
             if ((File.Exists("C:\\Users\\felipe\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe")))

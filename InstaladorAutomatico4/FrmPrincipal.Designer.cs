@@ -52,7 +52,7 @@
             this.pb_Winrar = new System.Windows.Forms.PictureBox();
             this.pb_TempDir = new System.Windows.Forms.PictureBox();
             this.pb_OneDrive = new System.Windows.Forms.PictureBox();
-            this.pb_FusionInventory = new System.Windows.Forms.PictureBox();
+            this.pb_GLPIAgent = new System.Windows.Forms.PictureBox();
             this.pb_Lightshot = new System.Windows.Forms.PictureBox();
             this.pb_Chrome = new System.Windows.Forms.PictureBox();
             this.pb_Java = new System.Windows.Forms.PictureBox();
@@ -97,7 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_TempDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_OneDrive)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_GLPIAgent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Lightshot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Java)).BeginInit();
@@ -144,7 +144,7 @@
             this.tabPage1.Controls.Add(this.pb_Winrar);
             this.tabPage1.Controls.Add(this.pb_TempDir);
             this.tabPage1.Controls.Add(this.pb_OneDrive);
-            this.tabPage1.Controls.Add(this.pb_FusionInventory);
+            this.tabPage1.Controls.Add(this.pb_GLPIAgent);
             this.tabPage1.Controls.Add(this.pb_Lightshot);
             this.tabPage1.Controls.Add(this.pb_Chrome);
             this.tabPage1.Controls.Add(this.pb_Java);
@@ -397,15 +397,15 @@
             this.pb_OneDrive.TabStop = false;
             this.pb_OneDrive.Click += new System.EventHandler(this.pb_OneDrive_Click);
             // 
-            // pb_FusionInventory
+            // pb_GLPIAgent
             // 
-            this.pb_FusionInventory.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
-            this.pb_FusionInventory.Location = new System.Drawing.Point(176, 170);
-            this.pb_FusionInventory.Name = "pb_FusionInventory";
-            this.pb_FusionInventory.Size = new System.Drawing.Size(20, 20);
-            this.pb_FusionInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_FusionInventory.TabIndex = 41;
-            this.pb_FusionInventory.TabStop = false;
+            this.pb_GLPIAgent.Image = global::InstaladorAutomatico4.Properties.Resources.check_error;
+            this.pb_GLPIAgent.Location = new System.Drawing.Point(176, 170);
+            this.pb_GLPIAgent.Name = "pb_GLPIAgent";
+            this.pb_GLPIAgent.Size = new System.Drawing.Size(20, 20);
+            this.pb_GLPIAgent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_GLPIAgent.TabIndex = 41;
+            this.pb_GLPIAgent.TabStop = false;
             // 
             // pb_Lightshot
             // 
@@ -756,7 +756,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Winrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_TempDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_OneDrive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_FusionInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_GLPIAgent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Lightshot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Chrome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Java)).EndInit();
@@ -808,7 +808,7 @@
         private System.Windows.Forms.PictureBox pb_Winrar;
         private System.Windows.Forms.PictureBox pb_TempDir;
         private System.Windows.Forms.PictureBox pb_OneDrive;
-        private System.Windows.Forms.PictureBox pb_FusionInventory;
+        private System.Windows.Forms.PictureBox pb_GLPIAgent;
         private System.Windows.Forms.PictureBox pb_Lightshot;
         private System.Windows.Forms.PictureBox pb_Chrome;
         private System.Windows.Forms.PictureBox pb_Java;
